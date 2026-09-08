@@ -1,0 +1,41 @@
+{
+  "heroTitle": "ट्रैवल गाइड में आपका स्वागत है",
+  "home": "होम",
+  "welcome": "स्वागत है",
+  "favourites": "पसंदीदा",
+  "login": "लॉगिन",
+  "register": "रजिस्टर",
+  "logout": "लॉगआउट",
+
+  "searchPlaceholder": "नाम या स्थान से खोजें...",
+  "all": "सभी",
+  "monument": "स्मारक",
+  "historical": "ऐतिहासिक",
+  "scenic": "दृश्य",
+  "fort": "किला",
+  "heritage": "विरासत",
+  "reset": "रीसेट",
+
+  "loading": "लोड हो रहा है...",
+  "failedLoad": "डेटा लोड नहीं हुआ",
+  "noResults": "कोई परिणाम नहीं मिला",
+
+  "createAccount": "खाता बनाएँ",
+  "alreadyAccount": "पहले से खाता है?",
+  "noAccount": "खाता नहीं है?",
+  "email": "ईमेल",
+  "password": "पासवर्ड",
+  "username": "उपयोगकर्ता नाम",
+
+  "back": "वापस जाएँ",
+  "addReview": "समीक्षा जोड़ें",
+  "rating": "रेटिंग",
+  "writeReview": "अपनी समीक्षा लिखें...",
+  "submitReview": "समीक्षा भेजें",
+  "reviews": "समीक्षाएँ",
+  "noReviews": "अभी तक कोई समीक्षा नहीं। आप पहले बनें!",
+  "reviewAdded": "समीक्षा जोड़ी गई!",
+  "reviewError": "समीक्षा जोड़ने में त्रुटि",
+  "loginRequired": "समीक्षा लिखने के लिए आपको लॉगिन करना होगा",
+  "unknownUser": "अज्ञात उपयोगकर्ता"
+}

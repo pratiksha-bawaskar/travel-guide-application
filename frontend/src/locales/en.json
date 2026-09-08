@@ -1,0 +1,41 @@
+{
+  "heroTitle": "Welcome to Travel Guide",
+  "home": "Home",
+  "welcome": "Welcome",
+  "favourites": "Favourites",
+  "login": "Login",
+  "register": "Register",
+  "logout": "Logout",
+
+  "searchPlaceholder": "Search by name or location...",
+  "all": "All",
+  "monument": "Monument",
+  "historical": "Historical",
+  "scenic": "Scenic",
+  "fort": "Fort",
+  "heritage": "Heritage",
+  "reset": "Reset",
+
+  "loading": "Loading...",
+  "failedLoad": "Failed to load places",
+  "noResults": "No results found",
+
+  "createAccount": "Create Account",
+  "alreadyAccount": "Already have an account?",
+  "noAccount": "No account?",
+  "email": "Email",
+  "password": "Password",
+  "username": "Username",
+
+  "back": "Back",
+  "addReview": "Add Review",
+  "rating": "Rating",
+  "writeReview": "Write your review...",
+  "submitReview": "Submit Review",
+  "reviews": "Reviews",
+  "noReviews": "No reviews yet. Be the first!",
+  "reviewAdded": "Review added!",
+  "reviewError": "Failed to add review",
+  "loginRequired": "You must log in to write a review",
+  "unknownUser": "Unknown user"
+}

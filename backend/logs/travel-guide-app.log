@@ -1,0 +1,804 @@
+2025-11-19 19:52:52.259 INFO  [restartedMain] c.t.b.TravelGuideBackendApplication - Starting TravelGuideBackendApplication using Java 21.0.2 with PID 7796 (C:\Users\91830\Pratiksha_Projects\travel-guide-backend\backend\target\classes started by 91830 in C:\Users\91830\Pratiksha_Projects\travel-guide-backend\backend)
+2025-11-19 19:52:52.260 DEBUG [restartedMain] c.t.b.TravelGuideBackendApplication - Running with Spring Boot v3.5.7, Spring v6.2.12
+2025-11-19 19:52:52.261 INFO  [restartedMain] c.t.b.TravelGuideBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-19 19:52:52.548 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-19 19:52:52.566 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 3 JPA repository interfaces.
+2025-11-19 19:52:52.979 INFO  [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-11-19 19:52:52.981 INFO  [restartedMain] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-19 19:52:52.982 INFO  [restartedMain] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-19 19:52:53.032 INFO  [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-11-19 19:52:53.032 INFO  [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 766 ms
+2025-11-19 19:52:53.101 INFO  [restartedMain] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-19 19:52:53.110 INFO  [restartedMain] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-19 19:52:53.137 INFO  [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-19 19:52:53.141 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Starting...
+2025-11-19 19:52:53.166 INFO  [restartedMain] com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@47b8c486
+2025-11-19 19:52:53.167 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Start completed.
+2025-11-19 19:52:53.172 INFO  [restartedMain] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-5)']
+	Database driver: undefined/unknown
+	Database version: 9.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-19 19:52:53.318 INFO  [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-19 19:52:53.426 INFO  [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-19 19:52:53.636 WARN  [restartedMain] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-19 19:52:53.901 INFO  [restartedMain] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-11-19 19:52:53.932 INFO  [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-11-19 19:52:53.942 INFO  [restartedMain] c.t.b.TravelGuideBackendApplication - Started TravelGuideBackendApplication in 1.886 seconds (process running for 3160.005)
+2025-11-19 19:52:53.944 INFO  [restartedMain] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-11-19 19:53:43.143 INFO  [File Watcher] o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-11-19 19:53:43.146 INFO  [Thread-19] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-19 19:53:43.168 INFO  [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-11-19 19:53:43.172 INFO  [Thread-19] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-19 19:53:43.173 INFO  [Thread-19] com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown initiated...
+2025-11-19 19:53:43.180 INFO  [Thread-19] com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown completed.
+2025-11-19 19:53:43.429 INFO  [restartedMain] c.t.b.TravelGuideBackendApplication - Starting TravelGuideBackendApplication using Java 21.0.2 with PID 7796 (C:\Users\91830\Pratiksha_Projects\travel-guide-backend\backend\target\classes started by 91830 in C:\Users\91830\Pratiksha_Projects\travel-guide-backend\backend)
+2025-11-19 19:53:43.430 DEBUG [restartedMain] c.t.b.TravelGuideBackendApplication - Running with Spring Boot v3.5.7, Spring v6.2.12
+2025-11-19 19:53:43.430 INFO  [restartedMain] c.t.b.TravelGuideBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-19 19:53:43.760 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-19 19:53:43.778 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 3 JPA repository interfaces.
+2025-11-19 19:53:43.959 INFO  [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-11-19 19:53:43.962 INFO  [restartedMain] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-19 19:53:43.962 INFO  [restartedMain] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-19 19:53:44.000 INFO  [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-11-19 19:53:44.000 INFO  [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 565 ms
+2025-11-19 19:53:44.049 INFO  [restartedMain] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-19 19:53:44.055 INFO  [restartedMain] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-19 19:53:44.072 INFO  [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-19 19:53:44.074 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Starting...
+2025-11-19 19:53:44.096 INFO  [restartedMain] com.zaxxer.hikari.pool.HikariPool - HikariPool-6 - Added connection com.mysql.cj.jdbc.ConnectionImpl@138c4a42
+2025-11-19 19:53:44.096 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Start completed.
+2025-11-19 19:53:44.098 INFO  [restartedMain] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-6)']
+	Database driver: undefined/unknown
+	Database version: 9.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-19 19:53:44.197 INFO  [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-19 19:53:44.229 INFO  [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-19 19:53:44.365 WARN  [restartedMain] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-19 19:53:44.484 INFO  [restartedMain] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-11-19 19:53:44.505 INFO  [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-11-19 19:53:44.510 INFO  [restartedMain] c.t.b.TravelGuideBackendApplication - Started TravelGuideBackendApplication in 1.242 seconds (process running for 3210.573)
+2025-11-19 19:53:44.512 INFO  [restartedMain] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-11-19 19:53:59.530 INFO  [File Watcher] o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-11-19 19:53:59.535 INFO  [Thread-25] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-19 19:53:59.570 INFO  [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-11-19 19:53:59.576 INFO  [Thread-25] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-19 19:53:59.576 INFO  [Thread-25] com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Shutdown initiated...
+2025-11-19 19:53:59.582 INFO  [Thread-25] com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Shutdown completed.
+2025-11-19 19:53:59.688 INFO  [restartedMain] c.t.b.TravelGuideBackendApplication - Starting TravelGuideBackendApplication using Java 21.0.2 with PID 7796 (C:\Users\91830\Pratiksha_Projects\travel-guide-backend\backend\target\classes started by 91830 in C:\Users\91830\Pratiksha_Projects\travel-guide-backend\backend)
+2025-11-19 19:53:59.688 DEBUG [restartedMain] c.t.b.TravelGuideBackendApplication - Running with Spring Boot v3.5.7, Spring v6.2.12
+2025-11-19 19:53:59.688 INFO  [restartedMain] c.t.b.TravelGuideBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-19 19:53:59.908 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-19 19:53:59.924 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 3 JPA repository interfaces.
+2025-11-19 19:54:00.143 INFO  [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-11-19 19:54:00.144 INFO  [restartedMain] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-19 19:54:00.145 INFO  [restartedMain] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-19 19:54:00.201 INFO  [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-11-19 19:54:00.201 INFO  [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 510 ms
+2025-11-19 19:54:00.247 INFO  [restartedMain] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-19 19:54:00.252 INFO  [restartedMain] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-19 19:54:00.265 INFO  [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-19 19:54:00.266 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Starting...
+2025-11-19 19:54:00.285 INFO  [restartedMain] com.zaxxer.hikari.pool.HikariPool - HikariPool-7 - Added connection com.mysql.cj.jdbc.ConnectionImpl@50fccd61
+2025-11-19 19:54:00.286 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Start completed.
+2025-11-19 19:54:00.288 INFO  [restartedMain] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-7)']
+	Database driver: undefined/unknown
+	Database version: 9.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-19 19:54:00.671 INFO  [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-19 19:54:00.697 INFO  [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-19 19:54:00.845 WARN  [restartedMain] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-19 19:54:00.969 INFO  [restartedMain] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-11-19 19:54:00.987 INFO  [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-11-19 19:54:00.991 INFO  [restartedMain] c.t.b.TravelGuideBackendApplication - Started TravelGuideBackendApplication in 1.34 seconds (process running for 3227.054)
+2025-11-19 19:54:00.992 INFO  [restartedMain] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-11-19 19:59:11.335 INFO  [File Watcher] o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-11-19 19:59:11.339 INFO  [Thread-29] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-19 19:59:11.371 INFO  [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-11-19 19:59:11.373 INFO  [Thread-29] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-19 19:59:11.374 INFO  [Thread-29] com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Shutdown initiated...
+2025-11-19 19:59:11.379 INFO  [Thread-29] com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Shutdown completed.
+2025-11-19 19:59:11.496 INFO  [restartedMain] c.t.b.TravelGuideBackendApplication - Starting TravelGuideBackendApplication using Java 21.0.2 with PID 7796 (C:\Users\91830\Pratiksha_Projects\travel-guide-backend\backend\target\classes started by 91830 in C:\Users\91830\Pratiksha_Projects\travel-guide-backend\backend)
+2025-11-19 19:59:11.497 DEBUG [restartedMain] c.t.b.TravelGuideBackendApplication - Running with Spring Boot v3.5.7, Spring v6.2.12
+2025-11-19 19:59:11.497 INFO  [restartedMain] c.t.b.TravelGuideBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-19 19:59:11.721 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-19 19:59:11.731 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9 ms. Found 3 JPA repository interfaces.
+2025-11-19 19:59:11.852 INFO  [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-11-19 19:59:11.855 INFO  [restartedMain] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-19 19:59:11.855 INFO  [restartedMain] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-19 19:59:11.907 INFO  [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-11-19 19:59:11.907 INFO  [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 407 ms
+2025-11-19 19:59:11.959 INFO  [restartedMain] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-19 19:59:11.963 INFO  [restartedMain] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-19 19:59:11.975 INFO  [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-19 19:59:11.976 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-8 - Starting...
+2025-11-19 19:59:11.996 INFO  [restartedMain] com.zaxxer.hikari.pool.HikariPool - HikariPool-8 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3bc56a4c
+2025-11-19 19:59:11.996 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-8 - Start completed.
+2025-11-19 19:59:11.997 INFO  [restartedMain] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-8)']
+	Database driver: undefined/unknown
+	Database version: 9.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-19 19:59:12.072 INFO  [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-19 19:59:12.141 INFO  [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-19 19:59:12.341 WARN  [restartedMain] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-19 19:59:12.550 INFO  [restartedMain] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-11-19 19:59:12.568 INFO  [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-11-19 19:59:12.575 INFO  [restartedMain] c.t.b.TravelGuideBackendApplication - Started TravelGuideBackendApplication in 1.124 seconds (process running for 3538.638)
+2025-11-19 19:59:12.577 INFO  [restartedMain] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-11-19 19:59:27.610 INFO  [File Watcher] o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-11-19 19:59:27.611 INFO  [Thread-33] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-19 19:59:27.630 INFO  [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-11-19 19:59:27.632 INFO  [Thread-33] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-19 19:59:27.632 INFO  [Thread-33] com.zaxxer.hikari.HikariDataSource - HikariPool-8 - Shutdown initiated...
+2025-11-19 19:59:27.637 INFO  [Thread-33] com.zaxxer.hikari.HikariDataSource - HikariPool-8 - Shutdown completed.
+2025-11-19 19:59:27.747 INFO  [restartedMain] c.t.b.TravelGuideBackendApplication - Starting TravelGuideBackendApplication using Java 21.0.2 with PID 7796 (C:\Users\91830\Pratiksha_Projects\travel-guide-backend\backend\target\classes started by 91830 in C:\Users\91830\Pratiksha_Projects\travel-guide-backend\backend)
+2025-11-19 19:59:27.748 DEBUG [restartedMain] c.t.b.TravelGuideBackendApplication - Running with Spring Boot v3.5.7, Spring v6.2.12
+2025-11-19 19:59:27.748 INFO  [restartedMain] c.t.b.TravelGuideBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-19 19:59:27.967 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-19 19:59:27.981 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12 ms. Found 3 JPA repository interfaces.
+2025-11-19 19:59:28.179 INFO  [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-11-19 19:59:28.181 INFO  [restartedMain] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-19 19:59:28.181 INFO  [restartedMain] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-19 19:59:28.228 INFO  [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-11-19 19:59:28.228 INFO  [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 478 ms
+2025-11-19 19:59:28.268 INFO  [restartedMain] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-19 19:59:28.274 INFO  [restartedMain] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-19 19:59:28.285 INFO  [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-19 19:59:28.288 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-9 - Starting...
+2025-11-19 19:59:28.304 INFO  [restartedMain] com.zaxxer.hikari.pool.HikariPool - HikariPool-9 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7c38759b
+2025-11-19 19:59:28.305 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-9 - Start completed.
+2025-11-19 19:59:28.307 INFO  [restartedMain] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-9)']
+	Database driver: undefined/unknown
+	Database version: 9.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-19 19:59:28.382 INFO  [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-19 19:59:28.409 INFO  [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-19 19:59:28.537 WARN  [restartedMain] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-19 19:59:28.664 INFO  [restartedMain] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-11-19 19:59:28.682 INFO  [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-11-19 19:59:28.688 INFO  [restartedMain] c.t.b.TravelGuideBackendApplication - Started TravelGuideBackendApplication in 0.979 seconds (process running for 3554.751)
+2025-11-19 19:59:28.690 INFO  [restartedMain] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-11-19 19:59:41.671 INFO  [File Watcher] o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-11-19 19:59:41.674 INFO  [Thread-37] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-19 19:59:41.713 INFO  [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-11-19 19:59:41.720 INFO  [Thread-37] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-19 19:59:41.722 INFO  [Thread-37] com.zaxxer.hikari.HikariDataSource - HikariPool-9 - Shutdown initiated...
+2025-11-19 19:59:41.741 INFO  [Thread-37] com.zaxxer.hikari.HikariDataSource - HikariPool-9 - Shutdown completed.
+2025-11-19 19:59:41.893 INFO  [restartedMain] c.t.b.TravelGuideBackendApplication - Starting TravelGuideBackendApplication using Java 21.0.2 with PID 7796 (C:\Users\91830\Pratiksha_Projects\travel-guide-backend\backend\target\classes started by 91830 in C:\Users\91830\Pratiksha_Projects\travel-guide-backend\backend)
+2025-11-19 19:59:41.894 DEBUG [restartedMain] c.t.b.TravelGuideBackendApplication - Running with Spring Boot v3.5.7, Spring v6.2.12
+2025-11-19 19:59:41.894 INFO  [restartedMain] c.t.b.TravelGuideBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-19 19:59:42.160 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-19 19:59:42.178 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 3 JPA repository interfaces.
+2025-11-19 19:59:42.496 INFO  [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-11-19 19:59:42.497 INFO  [restartedMain] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-19 19:59:42.497 INFO  [restartedMain] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-19 19:59:42.533 INFO  [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-11-19 19:59:42.533 INFO  [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 637 ms
+2025-11-19 19:59:42.578 INFO  [restartedMain] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-19 19:59:42.582 INFO  [restartedMain] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-19 19:59:42.595 INFO  [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-19 19:59:42.597 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-10 - Starting...
+2025-11-19 19:59:42.613 INFO  [restartedMain] com.zaxxer.hikari.pool.HikariPool - HikariPool-10 - Added connection com.mysql.cj.jdbc.ConnectionImpl@43d9d425
+2025-11-19 19:59:42.613 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-10 - Start completed.
+2025-11-19 19:59:42.615 INFO  [restartedMain] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-10)']
+	Database driver: undefined/unknown
+	Database version: 9.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-19 19:59:42.696 INFO  [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-19 19:59:42.720 INFO  [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-19 19:59:42.844 WARN  [restartedMain] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-19 19:59:42.966 INFO  [restartedMain] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-11-19 19:59:42.984 INFO  [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-11-19 19:59:42.988 INFO  [restartedMain] c.t.b.TravelGuideBackendApplication - Started TravelGuideBackendApplication in 1.148 seconds (process running for 3569.051)
+2025-11-19 19:59:42.990 INFO  [restartedMain] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-11-19 20:03:14.598 INFO  [File Watcher] o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-11-19 20:03:14.599 INFO  [Thread-41] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-19 20:03:14.621 INFO  [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-11-19 20:03:14.625 INFO  [Thread-41] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-19 20:03:14.625 INFO  [Thread-41] com.zaxxer.hikari.HikariDataSource - HikariPool-10 - Shutdown initiated...
+2025-11-19 20:03:14.630 INFO  [Thread-41] com.zaxxer.hikari.HikariDataSource - HikariPool-10 - Shutdown completed.
+2025-11-19 20:03:14.794 INFO  [restartedMain] c.t.b.TravelGuideBackendApplication - Starting TravelGuideBackendApplication using Java 21.0.2 with PID 7796 (C:\Users\91830\Pratiksha_Projects\travel-guide-backend\backend\target\classes started by 91830 in C:\Users\91830\Pratiksha_Projects\travel-guide-backend\backend)
+2025-11-19 20:03:14.795 DEBUG [restartedMain] c.t.b.TravelGuideBackendApplication - Running with Spring Boot v3.5.7, Spring v6.2.12
+2025-11-19 20:03:14.795 INFO  [restartedMain] c.t.b.TravelGuideBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-19 20:03:15.113 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-19 20:03:15.127 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 3 JPA repository interfaces.
+2025-11-19 20:03:15.349 INFO  [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-11-19 20:03:15.368 INFO  [restartedMain] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-19 20:03:15.369 INFO  [restartedMain] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-19 20:03:15.415 INFO  [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-11-19 20:03:15.415 INFO  [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 617 ms
+2025-11-19 20:03:15.475 INFO  [restartedMain] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-19 20:03:15.479 INFO  [restartedMain] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-19 20:03:15.495 INFO  [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-19 20:03:15.497 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-11 - Starting...
+2025-11-19 20:03:15.523 INFO  [restartedMain] com.zaxxer.hikari.pool.HikariPool - HikariPool-11 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5fc49002
+2025-11-19 20:03:15.523 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-11 - Start completed.
+2025-11-19 20:03:15.525 INFO  [restartedMain] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-11)']
+	Database driver: undefined/unknown
+	Database version: 9.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-19 20:03:15.611 INFO  [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-19 20:03:15.646 INFO  [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-19 20:03:15.778 WARN  [restartedMain] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-19 20:03:15.936 INFO  [restartedMain] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-11-19 20:03:15.954 INFO  [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-11-19 20:03:15.959 INFO  [restartedMain] c.t.b.TravelGuideBackendApplication - Started TravelGuideBackendApplication in 1.236 seconds (process running for 3782.021)
+2025-11-19 20:03:15.960 INFO  [restartedMain] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-11-19 20:03:38.219 INFO  [File Watcher] o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-11-19 20:03:38.224 INFO  [Thread-45] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-19 20:03:38.262 INFO  [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-11-19 20:03:38.267 INFO  [Thread-45] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-19 20:03:38.269 INFO  [Thread-45] com.zaxxer.hikari.HikariDataSource - HikariPool-11 - Shutdown initiated...
+2025-11-19 20:03:38.283 INFO  [Thread-45] com.zaxxer.hikari.HikariDataSource - HikariPool-11 - Shutdown completed.
+2025-11-19 20:03:38.482 INFO  [restartedMain] c.t.b.TravelGuideBackendApplication - Starting TravelGuideBackendApplication using Java 21.0.2 with PID 7796 (C:\Users\91830\Pratiksha_Projects\travel-guide-backend\backend\target\classes started by 91830 in C:\Users\91830\Pratiksha_Projects\travel-guide-backend\backend)
+2025-11-19 20:03:38.482 DEBUG [restartedMain] c.t.b.TravelGuideBackendApplication - Running with Spring Boot v3.5.7, Spring v6.2.12
+2025-11-19 20:03:38.482 INFO  [restartedMain] c.t.b.TravelGuideBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-19 20:03:38.791 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-19 20:03:38.808 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 3 JPA repository interfaces.
+2025-11-19 20:03:38.973 INFO  [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-11-19 20:03:38.975 INFO  [restartedMain] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-19 20:03:38.976 INFO  [restartedMain] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-19 20:03:39.011 INFO  [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-11-19 20:03:39.012 INFO  [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 523 ms
+2025-11-19 20:03:39.064 INFO  [restartedMain] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-19 20:03:39.068 INFO  [restartedMain] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-19 20:03:39.080 INFO  [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-19 20:03:39.082 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-12 - Starting...
+2025-11-19 20:03:39.101 INFO  [restartedMain] com.zaxxer.hikari.pool.HikariPool - HikariPool-12 - Added connection com.mysql.cj.jdbc.ConnectionImpl@68d3f8bf
+2025-11-19 20:03:39.101 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-12 - Start completed.
+2025-11-19 20:03:39.103 INFO  [restartedMain] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-12)']
+	Database driver: undefined/unknown
+	Database version: 9.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-19 20:03:39.169 INFO  [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-19 20:03:39.194 INFO  [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-19 20:03:39.325 WARN  [restartedMain] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-19 20:03:39.451 INFO  [restartedMain] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-11-19 20:03:39.468 INFO  [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-11-19 20:03:39.473 INFO  [restartedMain] c.t.b.TravelGuideBackendApplication - Started TravelGuideBackendApplication in 1.072 seconds (process running for 3805.535)
+2025-11-19 20:03:39.475 INFO  [restartedMain] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-11-19 20:03:52.480 INFO  [File Watcher] o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-11-19 20:03:52.481 INFO  [Thread-49] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-19 20:03:52.503 INFO  [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-11-19 20:03:52.505 INFO  [Thread-49] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-19 20:03:52.506 INFO  [Thread-49] com.zaxxer.hikari.HikariDataSource - HikariPool-12 - Shutdown initiated...
+2025-11-19 20:03:52.518 INFO  [Thread-49] com.zaxxer.hikari.HikariDataSource - HikariPool-12 - Shutdown completed.
+2025-11-19 20:03:52.659 INFO  [restartedMain] c.t.b.TravelGuideBackendApplication - Starting TravelGuideBackendApplication using Java 21.0.2 with PID 7796 (C:\Users\91830\Pratiksha_Projects\travel-guide-backend\backend\target\classes started by 91830 in C:\Users\91830\Pratiksha_Projects\travel-guide-backend\backend)
+2025-11-19 20:03:52.660 DEBUG [restartedMain] c.t.b.TravelGuideBackendApplication - Running with Spring Boot v3.5.7, Spring v6.2.12
+2025-11-19 20:03:52.660 INFO  [restartedMain] c.t.b.TravelGuideBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-19 20:03:52.946 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-19 20:03:52.965 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 3 JPA repository interfaces.
+2025-11-19 20:03:53.195 INFO  [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-11-19 20:03:53.197 INFO  [restartedMain] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-19 20:03:53.197 INFO  [restartedMain] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-19 20:03:53.230 INFO  [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-11-19 20:03:53.230 INFO  [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 567 ms
+2025-11-19 20:03:53.272 INFO  [restartedMain] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-19 20:03:53.278 INFO  [restartedMain] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-19 20:03:53.289 INFO  [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-19 20:03:53.291 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-13 - Starting...
+2025-11-19 20:03:53.308 INFO  [restartedMain] com.zaxxer.hikari.pool.HikariPool - HikariPool-13 - Added connection com.mysql.cj.jdbc.ConnectionImpl@55e44767
+2025-11-19 20:03:53.309 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-13 - Start completed.
+2025-11-19 20:03:53.310 INFO  [restartedMain] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-13)']
+	Database driver: undefined/unknown
+	Database version: 9.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-19 20:03:53.377 INFO  [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-19 20:03:53.401 INFO  [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-19 20:03:53.541 WARN  [restartedMain] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-19 20:03:53.653 INFO  [restartedMain] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-11-19 20:03:53.672 INFO  [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-11-19 20:03:53.676 INFO  [restartedMain] c.t.b.TravelGuideBackendApplication - Started TravelGuideBackendApplication in 1.066 seconds (process running for 3819.739)
+2025-11-19 20:03:53.677 INFO  [restartedMain] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-11-19 20:05:15.440 INFO  [File Watcher] o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2025-11-19 20:05:15.444 INFO  [Thread-53] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-19 20:05:15.480 INFO  [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-11-19 20:05:15.487 INFO  [Thread-53] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-19 20:05:15.489 INFO  [Thread-53] com.zaxxer.hikari.HikariDataSource - HikariPool-13 - Shutdown initiated...
+2025-11-19 20:05:15.499 INFO  [Thread-53] com.zaxxer.hikari.HikariDataSource - HikariPool-13 - Shutdown completed.
+2025-11-19 20:05:15.645 INFO  [restartedMain] c.t.b.TravelGuideBackendApplication - Starting TravelGuideBackendApplication using Java 21.0.2 with PID 7796 (C:\Users\91830\Pratiksha_Projects\travel-guide-backend\backend\target\classes started by 91830 in C:\Users\91830\Pratiksha_Projects\travel-guide-backend\backend)
+2025-11-19 20:05:15.645 DEBUG [restartedMain] c.t.b.TravelGuideBackendApplication - Running with Spring Boot v3.5.7, Spring v6.2.12
+2025-11-19 20:05:15.645 INFO  [restartedMain] c.t.b.TravelGuideBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-19 20:05:15.865 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-19 20:05:15.880 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 3 JPA repository interfaces.
+2025-11-19 20:05:16.029 INFO  [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-11-19 20:05:16.030 INFO  [restartedMain] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-19 20:05:16.030 INFO  [restartedMain] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-19 20:05:16.082 INFO  [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-11-19 20:05:16.082 INFO  [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 434 ms
+2025-11-19 20:05:16.123 INFO  [restartedMain] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-19 20:05:16.127 INFO  [restartedMain] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-19 20:05:16.138 INFO  [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-19 20:05:16.140 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-14 - Starting...
+2025-11-19 20:05:16.158 INFO  [restartedMain] com.zaxxer.hikari.pool.HikariPool - HikariPool-14 - Added connection com.mysql.cj.jdbc.ConnectionImpl@651625a2
+2025-11-19 20:05:16.158 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-14 - Start completed.
+2025-11-19 20:05:16.160 INFO  [restartedMain] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-14)']
+	Database driver: undefined/unknown
+	Database version: 9.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-19 20:05:16.222 INFO  [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-19 20:05:16.242 INFO  [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-19 20:05:16.355 WARN  [restartedMain] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-19 20:05:16.455 INFO  [restartedMain] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-11-19 20:05:16.469 INFO  [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-11-19 20:05:16.473 INFO  [restartedMain] c.t.b.TravelGuideBackendApplication - Started TravelGuideBackendApplication in 0.868 seconds (process running for 3902.536)
+2025-11-19 20:05:16.474 INFO  [restartedMain] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-11-19 20:05:40.999 INFO  [File Watcher] o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-11-19 20:05:41.002 INFO  [Thread-57] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-19 20:05:41.037 INFO  [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-11-19 20:05:41.040 INFO  [Thread-57] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-19 20:05:41.041 INFO  [Thread-57] com.zaxxer.hikari.HikariDataSource - HikariPool-14 - Shutdown initiated...
+2025-11-19 20:05:41.044 INFO  [Thread-57] com.zaxxer.hikari.HikariDataSource - HikariPool-14 - Shutdown completed.
+2025-11-19 20:05:41.160 INFO  [restartedMain] c.t.b.TravelGuideBackendApplication - Starting TravelGuideBackendApplication using Java 21.0.2 with PID 7796 (C:\Users\91830\Pratiksha_Projects\travel-guide-backend\backend\target\classes started by 91830 in C:\Users\91830\Pratiksha_Projects\travel-guide-backend\backend)
+2025-11-19 20:05:41.160 DEBUG [restartedMain] c.t.b.TravelGuideBackendApplication - Running with Spring Boot v3.5.7, Spring v6.2.12
+2025-11-19 20:05:41.160 INFO  [restartedMain] c.t.b.TravelGuideBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-19 20:05:41.380 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-19 20:05:41.395 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 3 JPA repository interfaces.
+2025-11-19 20:05:41.528 INFO  [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-11-19 20:05:41.529 INFO  [restartedMain] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-19 20:05:41.529 INFO  [restartedMain] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-19 20:05:41.574 INFO  [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-11-19 20:05:41.574 INFO  [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 411 ms
+2025-11-19 20:05:41.618 INFO  [restartedMain] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-19 20:05:41.623 INFO  [restartedMain] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-19 20:05:41.636 INFO  [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-19 20:05:41.637 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-15 - Starting...
+2025-11-19 20:05:41.655 INFO  [restartedMain] com.zaxxer.hikari.pool.HikariPool - HikariPool-15 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1077f04a
+2025-11-19 20:05:41.655 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-15 - Start completed.
+2025-11-19 20:05:41.657 INFO  [restartedMain] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-15)']
+	Database driver: undefined/unknown
+	Database version: 9.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-19 20:05:41.742 INFO  [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-19 20:05:41.890 INFO  [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-19 20:05:41.999 WARN  [restartedMain] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-19 20:05:42.087 INFO  [restartedMain] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-11-19 20:05:42.105 INFO  [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-11-19 20:05:42.108 INFO  [restartedMain] c.t.b.TravelGuideBackendApplication - Started TravelGuideBackendApplication in 0.984 seconds (process running for 3928.171)
+2025-11-19 20:05:42.109 INFO  [restartedMain] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-11-19 20:05:48.793 INFO  [File Watcher] o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-11-19 20:05:48.795 INFO  [Thread-61] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-19 20:05:48.833 INFO  [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-11-19 20:05:48.838 INFO  [Thread-61] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-19 20:05:48.839 INFO  [Thread-61] com.zaxxer.hikari.HikariDataSource - HikariPool-15 - Shutdown initiated...
+2025-11-19 20:05:48.843 INFO  [Thread-61] com.zaxxer.hikari.HikariDataSource - HikariPool-15 - Shutdown completed.
+2025-11-19 20:05:48.961 INFO  [restartedMain] c.t.b.TravelGuideBackendApplication - Starting TravelGuideBackendApplication using Java 21.0.2 with PID 7796 (C:\Users\91830\Pratiksha_Projects\travel-guide-backend\backend\target\classes started by 91830 in C:\Users\91830\Pratiksha_Projects\travel-guide-backend\backend)
+2025-11-19 20:05:48.961 DEBUG [restartedMain] c.t.b.TravelGuideBackendApplication - Running with Spring Boot v3.5.7, Spring v6.2.12
+2025-11-19 20:05:48.962 INFO  [restartedMain] c.t.b.TravelGuideBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-19 20:05:49.161 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-19 20:05:49.173 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 3 JPA repository interfaces.
+2025-11-19 20:05:49.334 INFO  [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-11-19 20:05:49.335 INFO  [restartedMain] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-19 20:05:49.335 INFO  [restartedMain] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-19 20:05:49.366 INFO  [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-11-19 20:05:49.366 INFO  [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 402 ms
+2025-11-19 20:05:49.404 INFO  [restartedMain] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-19 20:05:49.408 INFO  [restartedMain] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-19 20:05:49.418 INFO  [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-19 20:05:49.419 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-16 - Starting...
+2025-11-19 20:05:49.433 INFO  [restartedMain] com.zaxxer.hikari.pool.HikariPool - HikariPool-16 - Added connection com.mysql.cj.jdbc.ConnectionImpl@78c8fc4b
+2025-11-19 20:05:49.434 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-16 - Start completed.
+2025-11-19 20:05:49.435 INFO  [restartedMain] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-16)']
+	Database driver: undefined/unknown
+	Database version: 9.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-19 20:05:49.501 INFO  [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-19 20:05:49.518 INFO  [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-19 20:05:49.618 WARN  [restartedMain] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-19 20:05:49.713 INFO  [restartedMain] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-11-19 20:05:49.727 INFO  [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-11-19 20:05:49.730 INFO  [restartedMain] c.t.b.TravelGuideBackendApplication - Started TravelGuideBackendApplication in 0.809 seconds (process running for 3935.793)
+2025-11-19 20:05:49.731 INFO  [restartedMain] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-11-19 20:06:17.955 INFO  [File Watcher] o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2025-11-19 20:06:17.957 INFO  [Thread-65] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-19 20:06:17.981 INFO  [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-11-19 20:06:17.984 INFO  [Thread-65] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-19 20:06:17.985 INFO  [Thread-65] com.zaxxer.hikari.HikariDataSource - HikariPool-16 - Shutdown initiated...
+2025-11-19 20:06:17.990 INFO  [Thread-65] com.zaxxer.hikari.HikariDataSource - HikariPool-16 - Shutdown completed.
+2025-11-19 20:06:18.100 INFO  [restartedMain] c.t.b.TravelGuideBackendApplication - Starting TravelGuideBackendApplication using Java 21.0.2 with PID 7796 (C:\Users\91830\Pratiksha_Projects\travel-guide-backend\backend\target\classes started by 91830 in C:\Users\91830\Pratiksha_Projects\travel-guide-backend\backend)
+2025-11-19 20:06:18.101 DEBUG [restartedMain] c.t.b.TravelGuideBackendApplication - Running with Spring Boot v3.5.7, Spring v6.2.12
+2025-11-19 20:06:18.101 INFO  [restartedMain] c.t.b.TravelGuideBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-19 20:06:18.313 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-19 20:06:18.327 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12 ms. Found 3 JPA repository interfaces.
+2025-11-19 20:06:18.499 INFO  [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-11-19 20:06:18.500 INFO  [restartedMain] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-19 20:06:18.500 INFO  [restartedMain] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-19 20:06:18.531 INFO  [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-11-19 20:06:18.531 INFO  [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 427 ms
+2025-11-19 20:06:18.568 INFO  [restartedMain] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-19 20:06:18.572 INFO  [restartedMain] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-19 20:06:18.582 INFO  [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-19 20:06:18.583 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-17 - Starting...
+2025-11-19 20:06:18.598 INFO  [restartedMain] com.zaxxer.hikari.pool.HikariPool - HikariPool-17 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1d019f51
+2025-11-19 20:06:18.598 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-17 - Start completed.
+2025-11-19 20:06:18.599 INFO  [restartedMain] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-17)']
+	Database driver: undefined/unknown
+	Database version: 9.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-19 20:06:18.666 INFO  [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-19 20:06:18.685 INFO  [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-19 20:06:18.814 WARN  [restartedMain] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-19 20:06:18.920 INFO  [restartedMain] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-11-19 20:06:18.936 INFO  [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-11-19 20:06:18.940 INFO  [restartedMain] c.t.b.TravelGuideBackendApplication - Started TravelGuideBackendApplication in 0.874 seconds (process running for 3965.003)
+2025-11-19 20:06:18.941 INFO  [restartedMain] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-11-19 20:06:31.883 INFO  [File Watcher] o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-11-19 20:06:31.885 INFO  [Thread-69] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-19 20:06:31.918 INFO  [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-11-19 20:06:31.921 INFO  [Thread-69] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-19 20:06:31.921 INFO  [Thread-69] com.zaxxer.hikari.HikariDataSource - HikariPool-17 - Shutdown initiated...
+2025-11-19 20:06:31.925 INFO  [Thread-69] com.zaxxer.hikari.HikariDataSource - HikariPool-17 - Shutdown completed.
+2025-11-19 20:06:32.033 INFO  [restartedMain] c.t.b.TravelGuideBackendApplication - Starting TravelGuideBackendApplication using Java 21.0.2 with PID 7796 (C:\Users\91830\Pratiksha_Projects\travel-guide-backend\backend\target\classes started by 91830 in C:\Users\91830\Pratiksha_Projects\travel-guide-backend\backend)
+2025-11-19 20:06:32.033 DEBUG [restartedMain] c.t.b.TravelGuideBackendApplication - Running with Spring Boot v3.5.7, Spring v6.2.12
+2025-11-19 20:06:32.033 INFO  [restartedMain] c.t.b.TravelGuideBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-19 20:06:32.237 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-19 20:06:32.252 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 4 JPA repository interfaces.
+2025-11-19 20:06:32.402 INFO  [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-11-19 20:06:32.403 INFO  [restartedMain] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-19 20:06:32.403 INFO  [restartedMain] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-19 20:06:32.458 INFO  [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-11-19 20:06:32.459 INFO  [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 423 ms
+2025-11-19 20:06:32.495 INFO  [restartedMain] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-19 20:06:32.499 INFO  [restartedMain] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-19 20:06:32.510 INFO  [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-19 20:06:32.511 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-18 - Starting...
+2025-11-19 20:06:32.526 INFO  [restartedMain] com.zaxxer.hikari.pool.HikariPool - HikariPool-18 - Added connection com.mysql.cj.jdbc.ConnectionImpl@340798f4
+2025-11-19 20:06:32.526 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-18 - Start completed.
+2025-11-19 20:06:32.527 INFO  [restartedMain] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-18)']
+	Database driver: undefined/unknown
+	Database version: 9.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-19 20:06:32.594 INFO  [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-19 20:06:32.616 INFO  [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-19 20:06:32.726 WARN  [restartedMain] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-19 20:06:32.814 INFO  [restartedMain] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-11-19 20:06:32.833 INFO  [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-11-19 20:06:32.837 INFO  [restartedMain] c.t.b.TravelGuideBackendApplication - Started TravelGuideBackendApplication in 0.837 seconds (process running for 3978.9)
+2025-11-19 20:06:32.838 INFO  [restartedMain] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-11-19 20:06:34.978 INFO  [RMI TCP Connection(71)-127.0.0.1] o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2025-11-19 20:06:34.980 INFO  [RMI TCP Connection(71)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-19 20:06:35.018 INFO  [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-11-19 20:06:35.023 INFO  [RMI TCP Connection(71)-127.0.0.1] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-19 20:06:35.024 INFO  [RMI TCP Connection(71)-127.0.0.1] com.zaxxer.hikari.HikariDataSource - HikariPool-18 - Shutdown initiated...
+2025-11-19 20:06:35.030 INFO  [RMI TCP Connection(71)-127.0.0.1] com.zaxxer.hikari.HikariDataSource - HikariPool-18 - Shutdown completed.
+2025-11-19 20:16:56.250 INFO  [restartedMain] c.t.b.TravelGuideBackendApplication - Starting TravelGuideBackendApplication using Java 21.0.2 with PID 14044 (C:\Users\91830\Pratiksha_Projects\travel-guide-backend\backend\target\classes started by 91830 in C:\Users\91830\Pratiksha_Projects\travel-guide-backend\backend)
+2025-11-19 20:16:56.252 DEBUG [restartedMain] c.t.b.TravelGuideBackendApplication - Running with Spring Boot v3.5.7, Spring v6.2.12
+2025-11-19 20:16:56.253 INFO  [restartedMain] c.t.b.TravelGuideBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-19 20:16:56.346 INFO  [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-11-19 20:16:56.346 INFO  [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-11-19 20:16:57.358 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-19 20:16:57.443 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 68 ms. Found 4 JPA repository interfaces.
+2025-11-19 20:16:58.379 INFO  [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-11-19 20:16:58.397 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-11-19 20:16:58.399 INFO  [restartedMain] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-19 20:16:58.400 INFO  [restartedMain] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-19 20:16:58.469 INFO  [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-11-19 20:16:58.470 INFO  [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2122 ms
+2025-11-19 20:16:58.645 INFO  [restartedMain] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-19 20:16:58.711 INFO  [restartedMain] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-11-19 20:16:58.756 INFO  [restartedMain] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-19 20:16:59.102 INFO  [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-19 20:16:59.140 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-19 20:16:59.612 INFO  [restartedMain] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@c39cd5e
+2025-11-19 20:16:59.615 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-19 20:16:59.778 INFO  [restartedMain] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 9.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-19 20:17:00.904 INFO  [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-19 20:17:01.050 INFO  [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-19 20:17:01.519 WARN  [restartedMain] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-19 20:17:01.926 INFO  [restartedMain] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-11-19 20:17:01.957 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-11-19 20:17:01.980 INFO  [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-11-19 20:17:01.992 INFO  [restartedMain] c.t.b.TravelGuideBackendApplication - Started TravelGuideBackendApplication in 6.689 seconds (process running for 8.027)
+2025-11-19 20:17:56.561 INFO  [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-19 20:17:56.575 INFO  [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-11-19 20:17:56.642 INFO  [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet - Completed initialization in 67 ms
+2025-11-19 20:17:57.124 INFO  [http-nio-8080-exec-3] c.t.controller.PlaceController - GET /api/places called - q='null', category='null'
+2025-11-19 20:17:57.124 INFO  [http-nio-8080-exec-3] c.travelguide.service.PlaceService - getPlaces() called with q='null' and category='null'
+2025-11-19 20:17:57.764 INFO  [http-nio-8080-exec-2] c.t.controller.LogController - Client log received: level=INFO message=HTTP Request
+2025-11-19 20:17:57.766 INFO  [http-nio-8080-exec-4] c.t.controller.LogController - Client log received: level=INFO message=HTTP Request
+2025-11-19 20:17:58.805 DEBUG [http-nio-8080-exec-3] c.travelguide.service.PlaceService - getPlaces() result size=6
+2025-11-19 20:17:58.806 DEBUG [http-nio-8080-exec-3] c.t.controller.PlaceController - Returning 6 places
+2025-11-19 20:17:58.946 INFO  [http-nio-8080-exec-6] c.t.controller.PlaceController - GET /api/places called - q='null', category='null'
+2025-11-19 20:17:58.946 INFO  [http-nio-8080-exec-6] c.travelguide.service.PlaceService - getPlaces() called with q='null' and category='null'
+2025-11-19 20:17:58.950 INFO  [http-nio-8080-exec-7] c.t.controller.LogController - Client log received: level=INFO message=HTTP Response
+2025-11-19 20:17:58.961 DEBUG [http-nio-8080-exec-6] c.travelguide.service.PlaceService - getPlaces() result size=6
+2025-11-19 20:17:58.961 DEBUG [http-nio-8080-exec-6] c.t.controller.PlaceController - Returning 6 places
+2025-11-19 20:17:59.079 INFO  [http-nio-8080-exec-8] c.t.controller.LogController - Client log received: level=INFO message=HTTP Response
+2025-11-19 20:18:03.621 INFO  [http-nio-8080-exec-5] c.t.controller.PlaceController - GET /api/places/1 called
+2025-11-19 20:18:03.621 INFO  [http-nio-8080-exec-2] c.t.controller.ReviewController - GET /api/reviews/place/1 called
+2025-11-19 20:18:03.621 INFO  [http-nio-8080-exec-5] c.travelguide.service.PlaceService - getPlaceById() called for id=1
+2025-11-19 20:18:03.621 INFO  [http-nio-8080-exec-2] c.travelguide.service.ReviewService - getReviewsByPlace() called for placeId=1
+2025-11-19 20:18:03.658 DEBUG [http-nio-8080-exec-5] c.t.controller.PlaceController - Found place id=1
+2025-11-19 20:18:03.707 DEBUG [http-nio-8080-exec-2] c.travelguide.service.ReviewService - Found 0 reviews for placeId=1
+2025-11-19 20:18:03.707 DEBUG [http-nio-8080-exec-2] c.t.controller.ReviewController - Returning 0 reviews for place 1
+2025-11-19 20:18:07.010 INFO  [http-nio-8080-exec-6] c.t.controller.LogController - Client log received: level=INFO message=HTTP Request
+2025-11-19 20:18:07.010 INFO  [http-nio-8080-exec-7] c.t.controller.PlaceController - GET /api/places called - q='null', category='null'
+2025-11-19 20:18:07.010 INFO  [http-nio-8080-exec-7] c.travelguide.service.PlaceService - getPlaces() called with q='null' and category='null'
+2025-11-19 20:18:07.022 DEBUG [http-nio-8080-exec-7] c.travelguide.service.PlaceService - getPlaces() result size=6
+2025-11-19 20:18:07.022 DEBUG [http-nio-8080-exec-7] c.t.controller.PlaceController - Returning 6 places
+2025-11-19 20:18:07.040 INFO  [http-nio-8080-exec-8] c.t.controller.LogController - Client log received: level=INFO message=HTTP Response
+2025-11-19 20:18:07.356 INFO  [http-nio-8080-exec-10] c.t.controller.LogController - Client log received: level=INFO message=HTTP Request
+2025-11-19 20:18:07.356 INFO  [http-nio-8080-exec-1] c.t.controller.PlaceController - GET /api/places called - q='null', category='null'
+2025-11-19 20:18:07.358 INFO  [http-nio-8080-exec-1] c.travelguide.service.PlaceService - getPlaces() called with q='null' and category='null'
+2025-11-19 20:18:07.367 DEBUG [http-nio-8080-exec-1] c.travelguide.service.PlaceService - getPlaces() result size=6
+2025-11-19 20:18:07.371 DEBUG [http-nio-8080-exec-1] c.t.controller.PlaceController - Returning 6 places
+2025-11-19 20:18:07.377 INFO  [http-nio-8080-exec-9] c.t.controller.LogController - Client log received: level=INFO message=HTTP Response
+2025-11-19 20:20:35.037 INFO  [http-nio-8080-exec-3] c.t.controller.PlaceController - GET /api/places called - q='null', category='null'
+2025-11-19 20:20:35.037 INFO  [http-nio-8080-exec-3] c.travelguide.service.PlaceService - getPlaces() called with q='null' and category='null'
+2025-11-19 20:20:35.037 INFO  [http-nio-8080-exec-4] c.t.controller.LogController - Client log received: level=INFO message=HTTP Request
+2025-11-19 20:20:35.057 DEBUG [http-nio-8080-exec-3] c.travelguide.service.PlaceService - getPlaces() result size=6
+2025-11-19 20:20:35.057 DEBUG [http-nio-8080-exec-3] c.t.controller.PlaceController - Returning 6 places
+2025-11-19 20:20:35.073 INFO  [http-nio-8080-exec-6] c.t.controller.LogController - Client log received: level=INFO message=HTTP Response
+2025-11-19 20:20:35.583 INFO  [http-nio-8080-exec-8] c.t.controller.PlaceController - GET /api/places called - q='null', category='null'
+2025-11-19 20:20:35.583 INFO  [http-nio-8080-exec-7] c.t.controller.LogController - Client log received: level=INFO message=HTTP Request
+2025-11-19 20:20:35.583 INFO  [http-nio-8080-exec-8] c.travelguide.service.PlaceService - getPlaces() called with q='null' and category='null'
+2025-11-19 20:20:35.616 DEBUG [http-nio-8080-exec-8] c.travelguide.service.PlaceService - getPlaces() result size=6
+2025-11-19 20:20:35.618 DEBUG [http-nio-8080-exec-8] c.t.controller.PlaceController - Returning 6 places
+2025-11-19 20:20:35.642 INFO  [http-nio-8080-exec-10] c.t.controller.LogController - Client log received: level=INFO message=HTTP Response
+2025-11-19 20:21:24.261 INFO  [http-nio-8080-exec-5] c.t.controller.PlaceController - GET /api/places called - q='null', category='null'
+2025-11-19 20:21:24.261 INFO  [http-nio-8080-exec-5] c.travelguide.service.PlaceService - getPlaces() called with q='null' and category='null'
+2025-11-19 20:21:24.267 INFO  [http-nio-8080-exec-3] c.t.controller.LogController - Client log received: level=INFO message=HTTP Request
+2025-11-19 20:21:24.274 DEBUG [http-nio-8080-exec-5] c.travelguide.service.PlaceService - getPlaces() result size=6
+2025-11-19 20:21:24.275 DEBUG [http-nio-8080-exec-5] c.t.controller.PlaceController - Returning 6 places
+2025-11-19 20:21:24.294 INFO  [http-nio-8080-exec-4] c.t.controller.LogController - Client log received: level=INFO message=HTTP Response
+2025-11-19 20:21:24.602 INFO  [http-nio-8080-exec-6] c.t.controller.LogController - Client log received: level=INFO message=HTTP Request
+2025-11-19 20:21:24.602 INFO  [http-nio-8080-exec-7] c.t.controller.PlaceController - GET /api/places called - q='null', category='null'
+2025-11-19 20:21:24.603 INFO  [http-nio-8080-exec-7] c.travelguide.service.PlaceService - getPlaces() called with q='null' and category='null'
+2025-11-19 20:21:24.616 DEBUG [http-nio-8080-exec-7] c.travelguide.service.PlaceService - getPlaces() result size=6
+2025-11-19 20:21:24.617 DEBUG [http-nio-8080-exec-7] c.t.controller.PlaceController - Returning 6 places
+2025-11-19 20:21:24.721 INFO  [http-nio-8080-exec-8] c.t.controller.LogController - Client log received: level=INFO message=HTTP Response
+2025-11-19 20:21:26.481 INFO  [http-nio-8080-exec-1] c.t.controller.PlaceController - GET /api/places called - q='null', category='null'
+2025-11-19 20:21:26.482 INFO  [http-nio-8080-exec-1] c.travelguide.service.PlaceService - getPlaces() called with q='null' and category='null'
+2025-11-19 20:21:26.483 INFO  [http-nio-8080-exec-10] c.t.controller.LogController - Client log received: level=INFO message=HTTP Request
+2025-11-19 20:21:26.498 DEBUG [http-nio-8080-exec-1] c.travelguide.service.PlaceService - getPlaces() result size=6
+2025-11-19 20:21:26.498 DEBUG [http-nio-8080-exec-1] c.t.controller.PlaceController - Returning 6 places
+2025-11-19 20:21:26.513 INFO  [http-nio-8080-exec-9] c.t.controller.LogController - Client log received: level=INFO message=HTTP Response
+2025-11-19 20:21:26.865 INFO  [http-nio-8080-exec-2] c.t.controller.LogController - Client log received: level=INFO message=HTTP Request
+2025-11-19 20:21:26.865 INFO  [http-nio-8080-exec-5] c.t.controller.PlaceController - GET /api/places called - q='null', category='null'
+2025-11-19 20:21:26.865 INFO  [http-nio-8080-exec-5] c.travelguide.service.PlaceService - getPlaces() called with q='null' and category='null'
+2025-11-19 20:21:26.885 DEBUG [http-nio-8080-exec-5] c.travelguide.service.PlaceService - getPlaces() result size=6
+2025-11-19 20:21:26.886 DEBUG [http-nio-8080-exec-5] c.t.controller.PlaceController - Returning 6 places
+2025-11-19 20:21:26.900 INFO  [http-nio-8080-exec-3] c.t.controller.LogController - Client log received: level=INFO message=HTTP Response
+2025-11-19 20:28:51.933 INFO  [http-nio-8080-exec-8] c.t.controller.PlaceController - GET /api/places called - q='null', category='null'
+2025-11-19 20:28:51.941 INFO  [http-nio-8080-exec-8] c.travelguide.service.PlaceService - getPlaces() called with q='null' and category='null'
+2025-11-19 20:28:51.943 INFO  [http-nio-8080-exec-7] c.t.controller.LogController - Client log received: level=INFO message=HTTP Request
+2025-11-19 20:28:52.057 INFO  [http-nio-8080-exec-10] c.t.controller.LogController - Client log received: level=INFO message=HTTP Request
+2025-11-19 20:28:52.236 INFO  [http-nio-8080-exec-1] c.t.controller.LogController - Client log received: level=INFO message=HTTP Request
+2025-11-19 20:28:52.406 INFO  [http-nio-8080-exec-9] c.t.controller.LogController - Client log received: level=INFO message=HTTP Request
+2025-11-19 20:28:53.590 DEBUG [http-nio-8080-exec-8] c.travelguide.service.PlaceService - getPlaces() result size=6
+2025-11-19 20:28:53.590 DEBUG [http-nio-8080-exec-8] c.t.controller.PlaceController - Returning 6 places
+2025-11-19 20:28:53.631 INFO  [http-nio-8080-exec-2] c.t.controller.PlaceController - GET /api/places called - q='null', category='null'
+2025-11-19 20:28:53.631 INFO  [http-nio-8080-exec-2] c.travelguide.service.PlaceService - getPlaces() called with q='null' and category='null'
+2025-11-19 20:28:53.639 INFO  [http-nio-8080-exec-5] c.t.controller.LogController - Client log received: level=INFO message=HTTP Response
+2025-11-19 20:28:53.644 DEBUG [http-nio-8080-exec-2] c.travelguide.service.PlaceService - getPlaces() result size=6
+2025-11-19 20:28:53.644 DEBUG [http-nio-8080-exec-2] c.t.controller.PlaceController - Returning 6 places
+2025-11-19 20:28:53.650 INFO  [http-nio-8080-exec-2] c.t.controller.PlaceController - GET /api/places called - q='null', category='null'
+2025-11-19 20:28:53.650 INFO  [http-nio-8080-exec-2] c.travelguide.service.PlaceService - getPlaces() called with q='null' and category='null'
+2025-11-19 20:28:53.659 DEBUG [http-nio-8080-exec-2] c.travelguide.service.PlaceService - getPlaces() result size=6
+2025-11-19 20:28:53.659 DEBUG [http-nio-8080-exec-2] c.t.controller.PlaceController - Returning 6 places
+2025-11-19 20:28:53.660 INFO  [http-nio-8080-exec-3] c.t.controller.LogController - Client log received: level=INFO message=HTTP Response
+2025-11-19 20:28:53.663 INFO  [http-nio-8080-exec-6] c.t.controller.PlaceController - GET /api/places called - q='null', category='null'
+2025-11-19 20:28:53.663 INFO  [http-nio-8080-exec-6] c.travelguide.service.PlaceService - getPlaces() called with q='null' and category='null'
+2025-11-19 20:28:53.672 DEBUG [http-nio-8080-exec-6] c.travelguide.service.PlaceService - getPlaces() result size=6
+2025-11-19 20:28:53.672 DEBUG [http-nio-8080-exec-6] c.t.controller.PlaceController - Returning 6 places
+2025-11-19 20:28:53.726 INFO  [http-nio-8080-exec-9] c.t.controller.LogController - Client log received: level=INFO message=HTTP Response
+2025-11-19 20:28:53.807 INFO  [http-nio-8080-exec-8] c.t.controller.LogController - Client log received: level=INFO message=HTTP Response
+2025-11-19 20:29:01.256 INFO  [http-nio-8080-exec-1] c.t.controller.ReviewController - GET /api/reviews/place/2 called
+2025-11-19 20:29:01.256 INFO  [http-nio-8080-exec-10] c.t.controller.PlaceController - GET /api/places/2 called
+2025-11-19 20:29:01.256 INFO  [http-nio-8080-exec-1] c.travelguide.service.ReviewService - getReviewsByPlace() called for placeId=2
+2025-11-19 20:29:01.256 INFO  [http-nio-8080-exec-10] c.travelguide.service.PlaceService - getPlaceById() called for id=2
+2025-11-19 20:29:01.339 DEBUG [http-nio-8080-exec-10] c.t.controller.PlaceController - Found place id=2
+2025-11-19 20:29:01.553 DEBUG [http-nio-8080-exec-1] c.travelguide.service.ReviewService - Found 1 reviews for placeId=2
+2025-11-19 20:29:01.553 DEBUG [http-nio-8080-exec-1] c.t.controller.ReviewController - Returning 1 reviews for place 2
+2025-11-19 20:29:15.332 INFO  [RMI TCP Connection(16)-127.0.0.1] o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2025-11-19 20:29:15.407 INFO  [RMI TCP Connection(16)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-19 20:29:15.420 INFO  [tomcat-shutdown] o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2025-11-19 20:29:15.508 INFO  [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-11-19 20:29:15.512 INFO  [RMI TCP Connection(16)-127.0.0.1] o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2025-11-19 20:29:15.556 INFO  [RMI TCP Connection(16)-127.0.0.1] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-19 20:29:15.593 INFO  [RMI TCP Connection(16)-127.0.0.1] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-19 20:29:15.661 INFO  [RMI TCP Connection(16)-127.0.0.1] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-11-19 21:12:13.242 INFO  [restartedMain] c.t.b.TravelGuideBackendApplication - Starting TravelGuideBackendApplication using Java 21.0.2 with PID 1664 (C:\Users\91830\Pratiksha_Projects\travel-guide-backend\backend\target\classes started by 91830 in C:\Users\91830\Pratiksha_Projects\travel-guide-backend\backend)
+2025-11-19 21:12:13.244 DEBUG [restartedMain] c.t.b.TravelGuideBackendApplication - Running with Spring Boot v3.5.7, Spring v6.2.12
+2025-11-19 21:12:13.245 INFO  [restartedMain] c.t.b.TravelGuideBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-19 21:12:13.306 INFO  [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-11-19 21:12:13.306 INFO  [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-11-19 21:12:13.939 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-19 21:12:13.998 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 45 ms. Found 4 JPA repository interfaces.
+2025-11-19 21:12:14.638 INFO  [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-11-19 21:12:14.656 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-11-19 21:12:14.658 INFO  [restartedMain] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-19 21:12:14.659 INFO  [restartedMain] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-19 21:12:14.719 INFO  [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-11-19 21:12:14.719 INFO  [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1412 ms
+2025-11-19 21:12:14.880 INFO  [restartedMain] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-19 21:12:14.945 INFO  [restartedMain] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-11-19 21:12:14.983 INFO  [restartedMain] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-19 21:12:15.349 INFO  [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-19 21:12:15.391 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-19 21:12:15.914 INFO  [restartedMain] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@68ebe3b0
+2025-11-19 21:12:15.917 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-19 21:12:16.023 INFO  [restartedMain] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 9.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-19 21:12:16.956 INFO  [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-19 21:12:17.056 INFO  [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-19 21:12:17.476 WARN  [restartedMain] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-19 21:12:17.844 INFO  [restartedMain] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-11-19 21:12:17.864 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-11-19 21:12:17.887 INFO  [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-11-19 21:12:17.895 INFO  [restartedMain] c.t.b.TravelGuideBackendApplication - Started TravelGuideBackendApplication in 5.417 seconds (process running for 6.748)
+2025-11-19 21:13:11.481 INFO  [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-19 21:13:11.490 INFO  [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-11-19 21:13:11.561 INFO  [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet - Completed initialization in 71 ms
+2025-11-19 21:13:11.878 INFO  [http-nio-8080-exec-3] c.t.controller.PlaceController - GET /api/places called - q='null', category='null'
+2025-11-19 21:13:11.880 INFO  [http-nio-8080-exec-3] c.travelguide.service.PlaceService - getPlaces() called with q='null' and category='null'
+2025-11-19 21:13:12.087 INFO  [http-nio-8080-exec-4] c.t.controller.LogController - Client log received: level=INFO message=HTTP Request
+2025-11-19 21:13:12.089 INFO  [http-nio-8080-exec-2] c.t.controller.LogController - Client log received: level=INFO message=HTTP Request
+2025-11-19 21:13:12.435 DEBUG [http-nio-8080-exec-3] c.travelguide.service.PlaceService - getPlaces() result size=6
+2025-11-19 21:13:12.435 DEBUG [http-nio-8080-exec-3] c.t.controller.PlaceController - Returning 6 places
+2025-11-19 21:13:12.489 INFO  [http-nio-8080-exec-5] c.t.controller.PlaceController - GET /api/places called - q='null', category='null'
+2025-11-19 21:13:12.489 INFO  [http-nio-8080-exec-5] c.travelguide.service.PlaceService - getPlaces() called with q='null' and category='null'
+2025-11-19 21:13:12.491 INFO  [http-nio-8080-exec-6] c.t.controller.LogController - Client log received: level=INFO message=HTTP Response
+2025-11-19 21:13:12.498 DEBUG [http-nio-8080-exec-5] c.travelguide.service.PlaceService - getPlaces() result size=6
+2025-11-19 21:13:12.498 DEBUG [http-nio-8080-exec-5] c.t.controller.PlaceController - Returning 6 places
+2025-11-19 21:13:12.568 INFO  [http-nio-8080-exec-7] c.t.controller.LogController - Client log received: level=INFO message=HTTP Response
+2025-11-19 21:16:22.692 INFO  [http-nio-8080-exec-1] c.t.controller.PlaceController - GET /api/places called - q='', category=''
+2025-11-19 21:16:22.709 INFO  [http-nio-8080-exec-1] c.travelguide.service.PlaceService - getPlaces() called with q='' and category=''
+2025-11-19 21:16:22.924 DEBUG [http-nio-8080-exec-1] c.travelguide.service.PlaceService - getPlaces() result size=6
+2025-11-19 21:16:22.924 DEBUG [http-nio-8080-exec-1] c.t.controller.PlaceController - Returning 6 places
+2025-11-19 21:17:34.026 INFO  [http-nio-8080-exec-4] c.t.controller.PlaceController - GET /api/places called - q='', category=''
+2025-11-19 21:17:34.027 INFO  [http-nio-8080-exec-4] c.travelguide.service.PlaceService - getPlaces() called with q='' and category=''
+2025-11-19 21:17:34.047 DEBUG [http-nio-8080-exec-4] c.travelguide.service.PlaceService - getPlaces() result size=6
+2025-11-19 21:17:34.048 DEBUG [http-nio-8080-exec-4] c.t.controller.PlaceController - Returning 6 places
+2025-11-19 21:18:20.380 INFO  [http-nio-8080-exec-5] c.t.controller.PlaceController - GET /api/places called - q='', category=''
+2025-11-19 21:18:20.381 INFO  [http-nio-8080-exec-5] c.travelguide.service.PlaceService - getPlaces() called with q='' and category=''
+2025-11-19 21:18:20.398 DEBUG [http-nio-8080-exec-5] c.travelguide.service.PlaceService - getPlaces() result size=6
+2025-11-19 21:18:20.398 DEBUG [http-nio-8080-exec-5] c.t.controller.PlaceController - Returning 6 places
+2025-11-19 21:18:37.017 INFO  [http-nio-8080-exec-7] c.t.controller.PlaceController - GET /api/places called - q='', category=''
+2025-11-19 21:18:37.018 INFO  [http-nio-8080-exec-7] c.travelguide.service.PlaceService - getPlaces() called with q='' and category=''
+2025-11-19 21:18:37.040 DEBUG [http-nio-8080-exec-7] c.travelguide.service.PlaceService - getPlaces() result size=6
+2025-11-19 21:18:37.040 DEBUG [http-nio-8080-exec-7] c.t.controller.PlaceController - Returning 6 places
+2025-11-19 21:18:49.658 INFO  [http-nio-8080-exec-10] c.t.controller.PlaceController - GET /api/places called - q='', category=''
+2025-11-19 21:18:49.658 INFO  [http-nio-8080-exec-10] c.travelguide.service.PlaceService - getPlaces() called with q='' and category=''
+2025-11-19 21:18:49.669 DEBUG [http-nio-8080-exec-10] c.travelguide.service.PlaceService - getPlaces() result size=6
+2025-11-19 21:18:49.670 DEBUG [http-nio-8080-exec-10] c.t.controller.PlaceController - Returning 6 places
+2025-11-19 21:33:13.013 INFO  [http-nio-8080-exec-1] c.t.controller.PlaceController - GET /api/places called - q='null', category='null'
+2025-11-19 21:33:13.015 INFO  [http-nio-8080-exec-1] c.travelguide.service.PlaceService - getPlaces() called with q='null' and category='null'
+2025-11-19 21:33:13.036 DEBUG [http-nio-8080-exec-1] c.travelguide.service.PlaceService - getPlaces() result size=6
+2025-11-19 21:33:13.036 DEBUG [http-nio-8080-exec-1] c.t.controller.PlaceController - Returning 6 places
+2025-11-19 21:33:21.201 INFO  [http-nio-8080-exec-4] c.t.controller.ReviewController - GET /api/reviews/place/1 called
+2025-11-19 21:33:21.201 INFO  [http-nio-8080-exec-4] c.travelguide.service.ReviewService - getReviewsByPlace() called for placeId=1
+2025-11-19 21:33:21.201 INFO  [http-nio-8080-exec-2] c.t.controller.PlaceController - GET /api/places/1 called
+2025-11-19 21:33:21.201 INFO  [http-nio-8080-exec-2] c.travelguide.service.PlaceService - getPlaceById() called for id=1
+2025-11-19 21:33:21.312 DEBUG [http-nio-8080-exec-2] c.t.controller.PlaceController - Found place id=1
+2025-11-19 21:33:21.351 DEBUG [http-nio-8080-exec-4] c.travelguide.service.ReviewService - Found 0 reviews for placeId=1
+2025-11-19 21:33:21.352 DEBUG [http-nio-8080-exec-4] c.t.controller.ReviewController - Returning 0 reviews for place 1
+2025-11-19 21:33:24.724 INFO  [http-nio-8080-exec-6] c.t.controller.PlaceController - GET /api/places called - q='null', category='null'
+2025-11-19 21:33:24.724 INFO  [http-nio-8080-exec-6] c.travelguide.service.PlaceService - getPlaces() called with q='null' and category='null'
+2025-11-19 21:33:24.734 DEBUG [http-nio-8080-exec-6] c.travelguide.service.PlaceService - getPlaces() result size=6
+2025-11-19 21:33:24.734 DEBUG [http-nio-8080-exec-6] c.t.controller.PlaceController - Returning 6 places
+2025-11-19 21:34:13.144 INFO  [http-nio-8080-exec-9] c.t.controller.PlaceController - GET /api/places called - q='null', category='null'
+2025-11-19 21:34:13.144 INFO  [http-nio-8080-exec-9] c.travelguide.service.PlaceService - getPlaces() called with q='null' and category='null'
+2025-11-19 21:34:13.155 DEBUG [http-nio-8080-exec-9] c.travelguide.service.PlaceService - getPlaces() result size=6
+2025-11-19 21:34:13.155 DEBUG [http-nio-8080-exec-9] c.t.controller.PlaceController - Returning 6 places
+2025-11-19 21:34:17.491 INFO  [http-nio-8080-exec-10] c.t.controller.PlaceController - GET /api/places/1 called
+2025-11-19 21:34:17.491 INFO  [http-nio-8080-exec-10] c.travelguide.service.PlaceService - getPlaceById() called for id=1
+2025-11-19 21:34:17.493 INFO  [http-nio-8080-exec-8] c.t.controller.ReviewController - GET /api/reviews/place/1 called
+2025-11-19 21:34:17.494 INFO  [http-nio-8080-exec-8] c.travelguide.service.ReviewService - getReviewsByPlace() called for placeId=1
+2025-11-19 21:34:17.499 DEBUG [http-nio-8080-exec-10] c.t.controller.PlaceController - Found place id=1
+2025-11-19 21:34:17.499 DEBUG [http-nio-8080-exec-8] c.travelguide.service.ReviewService - Found 0 reviews for placeId=1
+2025-11-19 21:34:17.499 DEBUG [http-nio-8080-exec-8] c.t.controller.ReviewController - Returning 0 reviews for place 1
+2025-11-19 21:34:24.418 INFO  [http-nio-8080-exec-1] c.t.controller.PlaceController - GET /api/places called - q='null', category='null'
+2025-11-19 21:34:24.418 INFO  [http-nio-8080-exec-1] c.travelguide.service.PlaceService - getPlaces() called with q='null' and category='null'
+2025-11-19 21:34:24.428 DEBUG [http-nio-8080-exec-1] c.travelguide.service.PlaceService - getPlaces() result size=6
+2025-11-19 21:34:24.428 DEBUG [http-nio-8080-exec-1] c.t.controller.PlaceController - Returning 6 places
+2025-11-19 21:34:27.718 INFO  [http-nio-8080-exec-2] c.t.controller.PlaceController - GET /api/places called - q='null', category='null'
+2025-11-19 21:34:27.718 INFO  [http-nio-8080-exec-2] c.travelguide.service.PlaceService - getPlaces() called with q='null' and category='null'
+2025-11-19 21:34:27.733 DEBUG [http-nio-8080-exec-2] c.travelguide.service.PlaceService - getPlaces() result size=6
+2025-11-19 21:34:27.733 DEBUG [http-nio-8080-exec-2] c.t.controller.PlaceController - Returning 6 places
+2025-11-19 21:34:31.326 INFO  [http-nio-8080-exec-4] c.t.controller.PlaceController - GET /api/places called - q='null', category='null'
+2025-11-19 21:34:31.328 INFO  [http-nio-8080-exec-4] c.travelguide.service.PlaceService - getPlaces() called with q='null' and category='null'
+2025-11-19 21:34:31.337 DEBUG [http-nio-8080-exec-4] c.travelguide.service.PlaceService - getPlaces() result size=6
+2025-11-19 21:34:31.337 DEBUG [http-nio-8080-exec-4] c.t.controller.PlaceController - Returning 6 places
+2025-11-19 21:34:33.567 INFO  [http-nio-8080-exec-5] c.t.controller.PlaceController - GET /api/places called - q='null', category='null'
+2025-11-19 21:34:33.567 INFO  [http-nio-8080-exec-5] c.travelguide.service.PlaceService - getPlaces() called with q='null' and category='null'
+2025-11-19 21:34:33.576 DEBUG [http-nio-8080-exec-5] c.travelguide.service.PlaceService - getPlaces() result size=6
+2025-11-19 21:34:33.576 DEBUG [http-nio-8080-exec-5] c.t.controller.PlaceController - Returning 6 places
+2025-11-19 21:34:34.551 INFO  [http-nio-8080-exec-3] c.t.controller.PlaceController - GET /api/places called - q='null', category='null'
+2025-11-19 21:34:34.551 INFO  [http-nio-8080-exec-3] c.travelguide.service.PlaceService - getPlaces() called with q='null' and category='null'
+2025-11-19 21:34:34.563 DEBUG [http-nio-8080-exec-3] c.travelguide.service.PlaceService - getPlaces() result size=6
+2025-11-19 21:34:34.564 DEBUG [http-nio-8080-exec-3] c.t.controller.PlaceController - Returning 6 places
+2025-11-19 21:34:35.677 INFO  [http-nio-8080-exec-6] c.t.controller.PlaceController - GET /api/places/5 called
+2025-11-19 21:34:35.678 INFO  [http-nio-8080-exec-6] c.travelguide.service.PlaceService - getPlaceById() called for id=5
+2025-11-19 21:34:35.680 INFO  [http-nio-8080-exec-7] c.t.controller.ReviewController - GET /api/reviews/place/5 called
+2025-11-19 21:34:35.680 INFO  [http-nio-8080-exec-7] c.travelguide.service.ReviewService - getReviewsByPlace() called for placeId=5
+2025-11-19 21:34:35.684 DEBUG [http-nio-8080-exec-6] c.t.controller.PlaceController - Found place id=5
+2025-11-19 21:34:35.691 DEBUG [http-nio-8080-exec-7] c.travelguide.service.ReviewService - Found 0 reviews for placeId=5
+2025-11-19 21:34:35.691 DEBUG [http-nio-8080-exec-7] c.t.controller.ReviewController - Returning 0 reviews for place 5
+2025-11-19 21:34:41.019 INFO  [http-nio-8080-exec-9] c.t.controller.PlaceController - GET /api/places called - q='null', category='null'
+2025-11-19 21:34:41.019 INFO  [http-nio-8080-exec-9] c.travelguide.service.PlaceService - getPlaces() called with q='null' and category='null'
+2025-11-19 21:34:41.029 DEBUG [http-nio-8080-exec-9] c.travelguide.service.PlaceService - getPlaces() result size=6
+2025-11-19 21:34:41.030 DEBUG [http-nio-8080-exec-9] c.t.controller.PlaceController - Returning 6 places
+2025-11-19 21:34:42.629 INFO  [http-nio-8080-exec-10] c.t.controller.PlaceController - GET /api/places called - q='null', category='null'
+2025-11-19 21:34:42.631 INFO  [http-nio-8080-exec-10] c.travelguide.service.PlaceService - getPlaces() called with q='null' and category='null'
+2025-11-19 21:34:42.644 DEBUG [http-nio-8080-exec-10] c.travelguide.service.PlaceService - getPlaces() result size=6
+2025-11-19 21:34:42.645 DEBUG [http-nio-8080-exec-10] c.t.controller.PlaceController - Returning 6 places
+2025-11-19 21:34:44.869 INFO  [http-nio-8080-exec-1] c.t.controller.ReviewController - GET /api/reviews/place/3 called
+2025-11-19 21:34:44.869 INFO  [http-nio-8080-exec-1] c.travelguide.service.ReviewService - getReviewsByPlace() called for placeId=3
+2025-11-19 21:34:44.990 INFO  [http-nio-8080-exec-8] c.t.controller.PlaceController - GET /api/places/3 called
+2025-11-19 21:34:44.990 INFO  [http-nio-8080-exec-8] c.travelguide.service.PlaceService - getPlaceById() called for id=3
+2025-11-19 21:34:45.005 DEBUG [http-nio-8080-exec-8] c.t.controller.PlaceController - Found place id=3
+2025-11-19 21:34:45.029 DEBUG [http-nio-8080-exec-1] c.travelguide.service.ReviewService - Found 1 reviews for placeId=3
+2025-11-19 21:34:45.029 DEBUG [http-nio-8080-exec-1] c.t.controller.ReviewController - Returning 1 reviews for place 3
+2025-11-19 21:34:49.384 INFO  [http-nio-8080-exec-2] c.t.controller.PlaceController - GET /api/places called - q='null', category='null'
+2025-11-19 21:34:49.384 INFO  [http-nio-8080-exec-2] c.travelguide.service.PlaceService - getPlaces() called with q='null' and category='null'
+2025-11-19 21:34:49.394 DEBUG [http-nio-8080-exec-2] c.travelguide.service.PlaceService - getPlaces() result size=6
+2025-11-19 21:34:49.394 DEBUG [http-nio-8080-exec-2] c.t.controller.PlaceController - Returning 6 places
