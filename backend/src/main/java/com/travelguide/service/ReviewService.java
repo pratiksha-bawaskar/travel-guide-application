@@ -1,18 +1,17 @@
 package com.travelguide.service;
 
-import com.travelguide.dto.ReviewDTO;
-import com.travelguide.model.Review;
-import com.travelguide.repository.ReviewRepository;
-import com.travelguide.repository.UserRepository;
-import com.travelguide.repository.PlaceRepository;
+import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
+import com.travelguide.dto.ReviewDTO;
+import com.travelguide.model.Review;
+import com.travelguide.repository.PlaceRepository;
+import com.travelguide.repository.ReviewRepository;
+import com.travelguide.repository.UserRepository;
 
 @Service
 public class ReviewService {
@@ -40,6 +39,15 @@ public class ReviewService {
                 .map(ReviewDTO::fromEntity)
                 .toList();
     }
+
+    // 🔹 Get average rating for one place
+public Double getAverageRatingByPlace(Long placeId) {
+    logger.info("getAverageRatingByPlace() called for placeId={}", placeId);
+
+    Double averageRating = reviewRepository.getAverageRatingByPlaceId(placeId);
+
+    return averageRating != null ? averageRating : 0.0;
+}
 
     // 🔹 Create review
     public ReviewDTO addReview(ReviewDTO dto) {

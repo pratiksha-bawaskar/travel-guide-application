@@ -1,5 +1,11 @@
-import { useEffect, useState, useCallback } from "react";
-import axios from "axios";
+import api from "../api/axiosInstance";
+import {
+  useEffect,
+  useState,
+  useCallback,
+  useRef,
+} from "react";
+
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
@@ -7,10 +13,25 @@ function Places() {
   const { t } = useTranslation();
 
   const [places, setPlaces] = useState([]);
+  const [ratings, setRatings] = useState({});
+
+  const [favourites, setFavourites] = useState(() => {
+    return JSON.parse(localStorage.getItem("fav")) || [];
+  });
+
+  const [tripPlaces, setTripPlaces] = useState(() => {
+    return JSON.parse(localStorage.getItem("myTrip")) || [];
+  });
+
   const [q, setQ] = useState("");
   const [category, setCategory] = useState("all");
+  const [visibleCount, setVisibleCount] = useState(6);
+
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+
+  // Prevent old API requests from overwriting newer results
+  const requestIdRef = useRef(0);
 
   const categories = [
     { key: "all", label: t("all") },
@@ -22,23 +43,75 @@ function Places() {
   ];
 
   const fetchPlaces = useCallback(async () => {
+    const currentRequestId = ++requestIdRef.current;
+
     try {
       setLoading(true);
       setError(null);
 
       const params = {};
-      if (q.trim() !== "") params.q = q;
-      if (category !== "all") params.category = category;
 
-      const res = await axios.get("http://localhost:8080/api/places", {
-        params,
+      if (q.trim() !== "") {
+        params.q = q;
+      }
+
+      if (category !== "all") {
+        params.category = category;
+      }
+
+      const res = await api.get("/api/places", {
+  params,
+});
+
+      // Ignore outdated request
+      if (currentRequestId !== requestIdRef.current) {
+        return;
+      }
+
+      const fetchedPlaces = res.data || [];
+
+      setPlaces(fetchedPlaces);
+
+      // Fetch average rating for each place
+      const ratingRequests = fetchedPlaces.map(async (place) => {
+        try {
+          const ratingRes = await api.get(
+  `/api/reviews/place/${place.id}/rating`
+)
+          return {
+            id: place.id,
+            rating: Number(ratingRes.data || 0),
+          };
+        } catch (err) {
+          return {
+            id: place.id,
+            rating: 0,
+          };
+        }
       });
 
-      setPlaces(res.data || []);
+      const ratingResults = await Promise.all(ratingRequests);
+
+      // Ignore outdated rating request
+      if (currentRequestId !== requestIdRef.current) {
+        return;
+      }
+
+      const ratingMap = {};
+
+      ratingResults.forEach((item) => {
+        ratingMap[item.id] = item.rating;
+      });
+
+      setRatings(ratingMap);
     } catch (err) {
-      setError(t("failedLoad"));
+      if (currentRequestId === requestIdRef.current) {
+        setError(t("failedLoad"));
+      }
     } finally {
-      setLoading(false);
+      if (currentRequestId === requestIdRef.current) {
+        setLoading(false);
+      }
     }
   }, [q, category, t]);
 
@@ -46,34 +119,80 @@ function Places() {
     fetchPlaces();
   }, [fetchPlaces]);
 
+  // Reset visible cards whenever search/filter changes
+  useEffect(() => {
+    setVisibleCount(6);
+  }, [q, category]);
+
+  const formatRating = (placeId) => {
+    const rating = ratings[placeId];
+
+    if (!rating) {
+      return "No ratings yet";
+    }
+
+    return `${rating.toFixed(1)} ⭐`;
+  };
+
+  const toggleFavourite = (placeId) => {
+    setFavourites((prevFavourites) => {
+      const isFavourite = prevFavourites.includes(placeId);
+
+      const updatedFavourites = isFavourite
+        ? prevFavourites.filter((id) => id !== placeId)
+        : [...prevFavourites, placeId];
+
+      localStorage.setItem(
+        "fav",
+        JSON.stringify(updatedFavourites)
+      );
+
+      return updatedFavourites;
+    });
+  };
+
+  const toggleMyTrip = (placeId) => {
+    setTripPlaces((prevTripPlaces) => {
+      const isInTrip = prevTripPlaces.includes(placeId);
+
+      const updatedTripPlaces = isInTrip
+        ? prevTripPlaces.filter((id) => id !== placeId)
+        : [...prevTripPlaces, placeId];
+
+      localStorage.setItem(
+        "myTrip",
+        JSON.stringify(updatedTripPlaces)
+      );
+
+      return updatedTripPlaces;
+    });
+  };
+
+  const visiblePlaces = places.slice(0, visibleCount);
+
+  const hasMorePlaces = visibleCount < places.length;
+
   return (
-    <div style={{ padding: "20px" }}>
+    <div className="places-section">
+
       {/* Search */}
       <input
         type="text"
+        className="search-input"
         placeholder={t("searchPlaceholder")}
         value={q}
         onChange={(e) => setQ(e.target.value)}
-        style={{
-          padding: "10px",
-          borderRadius: 8,
-          border: "1px solid #ddd",
-          width: "300px",
-        }}
       />
 
       {/* Category Buttons */}
-      <div style={{ display: "flex", gap: 10, marginTop: 10 }}>
+      <div className="category-buttons">
         {categories.map((cat) => (
           <button
             key={cat.key}
+            className={`category-btn ${
+              category === cat.key ? "active" : ""
+            }`}
             onClick={() => setCategory(cat.key)}
-            style={{
-              padding: "8px 14px",
-              borderRadius: 8,
-              background: category === cat.key ? "#5561ff" : "white",
-              color: category === cat.key ? "white" : "black",
-            }}
           >
             {cat.label}
           </button>
@@ -82,37 +201,134 @@ function Places() {
 
       {/* Reset */}
       <button
+        className="reset-btn"
         onClick={() => {
           setQ("");
           setCategory("all");
+          setVisibleCount(6);
         }}
-        style={{ marginTop: 10 }}
       >
         {t("reset")}
       </button>
 
-      {/* Loading / Error */}
-      {loading && <p>{t("loading")}</p>}
-      {error && <p style={{ color: "red" }}>{error}</p>}
-      {places.length === 0 && !loading && <p>{t("noResults")}</p>}
+      {/* Loading */}
+      {loading && (
+        <p className="status-message">
+          {t("loading")}
+        </p>
+      )}
+
+      {/* Error */}
+      {error && (
+        <p className="error-message">
+          {error}
+        </p>
+      )}
+
+      {/* No Results */}
+      {places.length === 0 &&
+        !loading &&
+        !error && (
+          <p className="status-message">
+            {t("noResults")}
+          </p>
+        )}
 
       {/* Places Cards */}
       <div className="places">
-        {places.map((place) => (
-          <Link
-            to={`/place/${place.id}`}
-            key={place.id}
-            style={{ textDecoration: "none", color: "inherit" }}
-          >
-            <div className="card">
-              <img src={place.imageUrl} alt={place.name} />
-              <h2>{place.name}</h2>
-              <p>{place.location}</p>
-              <p>{place.description}</p>
+        {visiblePlaces.map((place) => {
+          const isFavourite = favourites.includes(place.id);
+          const isInTrip = tripPlaces.includes(place.id);
+
+          return (
+            <div
+              className="card"
+              key={place.id}
+            >
+              <img
+                src={place.imageUrl}
+                alt={place.name}
+              />
+
+              <div className="card-content">
+
+                <div className="card-header">
+                  <h2>{place.name}</h2>
+
+                  <span className="rating-badge">
+                    {formatRating(place.id)}
+                  </span>
+                </div>
+
+                <p className="card-location">
+                  📍 {place.location}
+                </p>
+
+                <p className="card-description">
+                  {place.description}
+                </p>
+
+                <div className="card-actions">
+
+                  {/* Favourite */}
+                  <button
+                    className={`favourite-btn ${
+                      isFavourite ? "saved" : ""
+                    }`}
+                    onClick={() =>
+                      toggleFavourite(place.id)
+                    }
+                  >
+                    {isFavourite
+                      ? "❤️ Saved"
+                      : "♡ Save"}
+                  </button>
+
+                  {/* My Trip */}
+                  <button
+                    className={`trip-btn ${
+                      isInTrip ? "added" : ""
+                    }`}
+                    onClick={() =>
+                      toggleMyTrip(place.id)
+                    }
+                  >
+                    {isInTrip
+                      ? "🧳 In My Trip"
+                      : "🧳 Add to My Trip"}
+                  </button>
+
+                  {/* Details */}
+                  <Link
+                    to={`/place/${place.id}`}
+                    className="view-details-btn"
+                  >
+                    View Details →
+                  </Link>
+
+                </div>
+              </div>
             </div>
-          </Link>
-        ))}
+          );
+        })}
       </div>
+
+      {/* Load More */}
+      {hasMorePlaces && (
+        <div className="load-more-container">
+          <button
+            className="load-more-btn"
+            onClick={() =>
+              setVisibleCount(
+                (prev) => prev + 6
+              )
+            }
+          >
+            Load More Destinations ↓
+          </button>
+        </div>
+      )}
+
     </div>
   );
 }

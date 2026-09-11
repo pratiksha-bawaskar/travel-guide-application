@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import axios from "axios";
+import api from "../../api/axiosInstance";
 import { useTranslation } from "react-i18next";
 
 const Login = () => {
@@ -9,8 +9,7 @@ const Login = () => {
   const [password, setPassword] = useState("");
 
   const submitLogin = () => {
-    axios
-      .post("http://localhost:8080/api/users/login", {
+    api.post("/api/users/login", {
         email,
         password,
       })
@@ -22,20 +21,44 @@ const Login = () => {
   };
 
   return (
-    <div style={{ padding: 20 }}>
-      <h1>{t("login")}</h1>
+    <div className="auth-page">
+      <div className="auth-card">
+        <div className="auth-icon">🌍</div>
 
-      <input
-        placeholder={t("email")}
-        onChange={(e) => setEmail(e.target.value)}
-      />
-      <input
-        placeholder={t("password")}
-        type="password"
-        onChange={(e) => setPassword(e.target.value)}
-      />
+        <h1>{t("login")}</h1>
 
-      <button onClick={submitLogin}>{t("login")}</button>
+        <p className="auth-subtitle">
+          Explore amazing destinations and plan your journey.
+        </p>
+
+        <div className="form-group">
+          <label>{t("email")}</label>
+          <input
+            type="email"
+            placeholder={t("email")}
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+        </div>
+
+        <div className="form-group">
+          <label>{t("password")}</label>
+          <input
+            type="password"
+            placeholder={t("password")}
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+        </div>
+
+        <button className="auth-button" onClick={submitLogin}>
+          {t("login")} →
+        </button>
+
+        <p className="auth-footer-text">
+          Discover. Explore. Travel. ✈️
+        </p>
+      </div>
     </div>
   );
 };

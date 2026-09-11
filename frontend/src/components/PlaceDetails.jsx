@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import api from "../api/axiosInstance";
+import React, { useEffect, useMemo, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
@@ -11,73 +11,146 @@ const PlaceDetails = () => {
   const [reviews, setReviews] = useState([]);
   const [rating, setRating] = useState(5);
   const [comment, setComment] = useState("");
+
   const user = JSON.parse(localStorage.getItem("user"));
 
-  // Fetch place + reviews
   useEffect(() => {
-    axios
-      .get(`http://localhost:8080/api/places/${id}`)
+    api.get(`/api/places/${id}`)
       .then((res) => setPlace(res.data))
       .catch((err) => console.error(err));
 
-    axios
-      .get(`http://localhost:8080/api/reviews/place/${id}`)
+   api.get(`/api/reviews/place/${id}`)
       .then((res) => setReviews(res.data))
       .catch((err) => console.error(err));
   }, [id]);
 
-  // Add review
+  const averageRating = useMemo(() => {
+    if (reviews.length === 0) return 0;
+
+    const total = reviews.reduce(
+      (sum, review) => sum + Number(review.rating || 0),
+      0
+    );
+
+    return (total / reviews.length).toFixed(1);
+  }, [reviews]);
+
+  const ratingCounts = useMemo(() => {
+    return {
+      5: reviews.filter((r) => Number(r.rating) === 5).length,
+      4: reviews.filter((r) => Number(r.rating) === 4).length,
+      3: reviews.filter((r) => Number(r.rating) === 3).length,
+      2: reviews.filter((r) => Number(r.rating) === 2).length,
+      1: reviews.filter((r) => Number(r.rating) === 1).length,
+    };
+  }, [reviews]);
+
   const submitReview = () => {
     if (!user) {
       alert(t("loginRequired"));
       return;
     }
 
+    if (!comment.trim()) {
+      alert(t("writeReview"));
+      return;
+    }
+
     const dto = {
       placeId: id,
       userId: user.id,
-      rating,
-      comment,
+      rating: Number(rating),
+      comment: comment.trim(),
     };
 
-    axios
-      .post("http://localhost:8080/api/reviews", dto)
+    api.post("/api/reviews", dto)
       .then((res) => {
         alert(t("reviewAdded"));
-        setReviews([...reviews, res.data]);
+
+        setReviews((prevReviews) => [...prevReviews, res.data]);
         setComment("");
         setRating(5);
       })
       .catch(() => alert(t("reviewError")));
   };
 
-  if (!place) return <p>{t("loading")}</p>;
+  if (!place) {
+    return <p className="status-message">{t("loading")}</p>;
+  }
 
   return (
-    <div style={{ padding: "20px", maxWidth: 900, margin: "auto" }}>
-      <button onClick={() => window.history.back()}>← {t("back")}</button>
+    <div className="place-details">
+      <button
+        className="back-button"
+        onClick={() => window.history.back()}
+      >
+        ← {t("back")}
+      </button>
 
       <img
+        className="place-details-image"
         src={place.imageUrl}
         alt={place.name}
-        style={{ width: "100%", borderRadius: 10, marginTop: 20 }}
       />
 
       <h1>{place.name}</h1>
-      <h3>{place.location}</h3>
-      <p>{place.description}</p>
+      <h3 className="place-location">{place.location}</h3>
+      <p className="place-description">{place.description}</p>
+
+      <hr />
+
+      {/* Rating Summary */}
+      <section className="rating-summary">
+        <div className="rating-score">
+          <span className="rating-number">
+            {reviews.length > 0 ? averageRating : "—"}
+          </span>
+
+          <span className="rating-stars">
+            {reviews.length > 0 ? "⭐" : "☆"}
+          </span>
+
+          <p>
+            {reviews.length}{" "}
+            {reviews.length === 1 ? "review" : "reviews"}
+          </p>
+        </div>
+
+        <div className="rating-breakdown">
+          {[5, 4, 3, 2, 1].map((star) => (
+            <div className="rating-row" key={star}>
+              <span>{star} ⭐</span>
+
+              <div className="rating-bar">
+                <div
+                  className="rating-bar-fill"
+                  style={{
+                    width:
+                      reviews.length > 0
+                        ? `${(ratingCounts[star] / reviews.length) * 100}%`
+                        : "0%",
+                  }}
+                />
+              </div>
+
+              <span>{ratingCounts[star]}</span>
+            </div>
+          ))}
+        </div>
+      </section>
 
       <hr />
 
       {/* ADD REVIEW */}
       <h2>{t("addReview")}</h2>
 
-      <div>
+      <div className="review-form">
         <label>{t("rating")}:</label>
+
         <select
           value={rating}
-          onChange={(e) => setRating(e.target.value)}
-          style={{ marginLeft: 10 }}
+          onChange={(e) => setRating(Number(e.target.value))}
+          className="rating-select"
         >
           <option value="1">⭐ (1)</option>
           <option value="2">⭐⭐ (2)</option>
@@ -85,36 +158,21 @@ const PlaceDetails = () => {
           <option value="4">⭐⭐⭐⭐ (4)</option>
           <option value="5">⭐⭐⭐⭐⭐ (5)</option>
         </select>
+
+        <textarea
+          placeholder={t("writeReview")}
+          value={comment}
+          onChange={(e) => setComment(e.target.value)}
+          className="review-textarea"
+        />
+
+        <button
+          onClick={submitReview}
+          className="submit-review-btn"
+        >
+          {t("submitReview")}
+        </button>
       </div>
-
-      <textarea
-        placeholder={t("writeReview")}
-        value={comment}
-        onChange={(e) => setComment(e.target.value)}
-        style={{
-          width: "100%",
-          height: 120,
-          marginTop: 10,
-          padding: 10,
-          borderRadius: 8,
-          border: "1px solid #ccc",
-        }}
-      ></textarea>
-
-      <button
-        onClick={submitReview}
-        style={{
-          marginTop: 10,
-          padding: "10px 20px",
-          background: "#5561ff",
-          color: "#fff",
-          border: "none",
-          borderRadius: 6,
-          cursor: "pointer",
-        }}
-      >
-        {t("submitReview")}
-      </button>
 
       <hr />
 
@@ -122,24 +180,19 @@ const PlaceDetails = () => {
       <h2>{t("reviews")}</h2>
 
       {reviews.length === 0 ? (
-        <p>{t("noReviews")}</p>
+        <p className="status-message">{t("noReviews")}</p>
       ) : (
-        reviews.map((r) => (
-          <div
-            key={r.id}
-            style={{
-              background: "#f8f8f8",
-              padding: 15,
-              borderRadius: 8,
-              marginBottom: 10,
-            }}
-          >
-            <strong>
-              {r.user?.username || t("unknownUser")} — {r.rating}⭐
-            </strong>
-            <p>{r.comment}</p>
-          </div>
-        ))
+        <div className="reviews-list">
+          {reviews.map((r) => (
+            <div className="review-card" key={r.id}>
+              <strong>
+                {r.user?.username || t("unknownUser")} — {r.rating}⭐
+              </strong>
+
+              <p>{r.comment}</p>
+            </div>
+          ))}
+        </div>
       )}
     </div>
   );

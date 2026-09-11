@@ -6,29 +6,29 @@ const Navbar = () => {
   const { t } = useTranslation();
 
   return (
-    <nav
-      style={{
-        display: "flex",
-        padding: "15px 25px",
-        justifyContent: "space-between",
-        background: "#fff",
-        boxShadow: "0 2px 6px rgba(0,0,0,0.1)",
-      }}
-    >
+    <nav className="navbar">
       <div>
-        <Link to="/" style={{ marginRight: 20 }}>
+        <Link to="/" className="nav-link">
           {t("home")}
         </Link>
-        <Link to="/favourites" style={{ marginRight: 20 }}>
+
+        <Link to="/favourites" className="nav-link">
           {t("favourites")}
+        </Link>
+
+        <Link to="/my-trip" className="nav-link">
+          🧳 My Trip
         </Link>
       </div>
 
       <div>
-        <Link to="/login" style={{ marginRight: 20 }}>
+        <Link to="/login" className="nav-link">
           {t("login")}
         </Link>
-        <Link to="/register">{t("register")}</Link>
+
+        <Link to="/register" className="nav-link">
+          {t("register")}
+        </Link>
       </div>
     </nav>
   );

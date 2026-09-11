@@ -23,57 +23,125 @@ public class PlaceService {
     // 🔹 Get all places
     public List<Place> getAllPlaces() {
         logger.debug("getAllPlaces() called");
+
         List<Place> list = placeRepository.findAll();
+
         logger.debug("Returning {} places", list.size());
+
         return list;
     }
 
     // 🔹 Search + Filter
     public List<Place> getPlaces(String q, String category) {
-        logger.info("getPlaces() called with q='{}' and category='{}'", q, category);
+        logger.info(
+                "getPlaces() called with q='{}' and category='{}'",
+                q,
+                category
+        );
 
-        boolean hasQ = (q != null && !q.trim().isEmpty());
-        boolean hasCategory = (category != null && !category.trim().isEmpty());
+        boolean hasQ = (
+                q != null &&
+                !q.trim().isEmpty()
+        );
+
+        boolean hasCategory = (
+                category != null &&
+                !category.trim().isEmpty() &&
+                !category.equalsIgnoreCase("all")
+        );
 
         List<Place> result;
 
+        // Search + Category filter
         if (hasQ && hasCategory) {
+
             result = placeRepository.findAll().stream()
-                    .filter(p -> p.getCategory() != null && p.getCategory().equalsIgnoreCase(category))
-                    .filter(p -> p.getName().toLowerCase().contains(q.toLowerCase())
-                            || p.getLocation().toLowerCase().contains(q.toLowerCase()))
+                    .filter(p ->
+                            p.getCategory() != null &&
+                            p.getCategory().equalsIgnoreCase(category)
+                    )
+                    .filter(p ->
+                            (p.getName() != null &&
+                             p.getName().toLowerCase()
+                              .contains(q.toLowerCase()))
+                            ||
+                            (p.getLocation() != null &&
+                             p.getLocation().toLowerCase()
+                              .contains(q.toLowerCase()))
+                    )
                     .toList();
-        } else if (hasQ) {
-            result = placeRepository.findByNameContainingIgnoreCaseOrLocationContainingIgnoreCase(q, q);
-        } else if (hasCategory) {
-            result = placeRepository.findByCategoryIgnoreCase(category);
-        } else {
-            result = placeRepository.findAll();
+
         }
 
-        logger.debug("getPlaces() result size={}", result.size());
+        // Search only
+        else if (hasQ) {
+
+            result = placeRepository
+                    .findByNameContainingIgnoreCaseOrLocationContainingIgnoreCase(
+                            q,
+                            q
+                    );
+
+        }
+
+        // Category only
+        else if (hasCategory) {
+
+            result = placeRepository.findByCategoryIgnoreCase(category);
+
+        }
+
+        // No search + no category = return all places
+        else {
+
+            result = placeRepository.findAll();
+
+        }
+
+        logger.debug(
+                "getPlaces() result size={}",
+                result.size()
+        );
+
         return result;
     }
 
     // 🔹 Get place by ID
     public Place getPlaceById(Long id) {
-        logger.info("getPlaceById() called for id={}", id);
+        logger.info(
+                "getPlaceById() called for id={}",
+                id
+        );
 
         return placeRepository.findById(id)
                 .orElseThrow(() -> {
-                    logger.error("Place not found with id={}", id);
-                    return new RuntimeException("Place not found with id: " + id);
+                    logger.error(
+                            "Place not found with id={}",
+                            id
+                    );
+
+                    return new RuntimeException(
+                            "Place not found with id: " + id
+                    );
                 });
     }
 
     // 🔹 Create place
     public Place createPlace(PlaceDTO dto) {
-        logger.info("createPlace() called: {}", dto.getName());
+        logger.info(
+                "createPlace() called: {}",
+                dto.getName()
+        );
 
         Place place = PlaceMapper.toEntity(dto);
+
         Place saved = placeRepository.save(place);
 
-        logger.info("Place created successfully with id={}", saved.getId());
+        logger.info(
+                "Place created successfully with id={}",
+                saved.getId()
+        );
+
         return saved;
     }
 }

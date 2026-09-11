@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
+import api from "../api/axiosInstance";
 
 function Reviews({ placeId }) {
   const [reviews, setReviews] = useState([]);
@@ -11,9 +11,9 @@ function Reviews({ placeId }) {
   const fetchReviews = async () => {
     try {
       setLoading(true);
-      const res = await axios.get(
-        `http://localhost:8080/api/places/${placeId}/reviews`
-      );
+     const res = await api.get(
+  `/api/places/${placeId}/reviews`
+);
       setReviews(res.data || []);
     } catch (err) {
       console.error("Error loading reviews:", err);
@@ -34,10 +34,10 @@ function Reviews({ placeId }) {
       setError(null);
 
       const payload = { rating: Number(rating), comment };
-      await axios.post(
-        `http://localhost:8080/api/places/${placeId}/reviews`,
-        payload
-      );
+      await api.post(
+  `/api/places/${placeId}/reviews`,
+  payload
+);
 
       setComment("");
       setRating(5);

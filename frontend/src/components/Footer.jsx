@@ -5,14 +5,7 @@ const Footer = () => {
   const { t } = useTranslation();
 
   return (
-    <footer
-      style={{
-        padding: "15px",
-        marginTop: "40px",
-        textAlign: "center",
-        background: "#f2f2f2",
-      }}
-    >
+    <footer className="footer">
       <p>© 2025 Travel Guide · {t("welcome")}</p>
     </footer>
   );

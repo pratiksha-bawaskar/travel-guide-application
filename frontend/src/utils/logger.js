@@ -3,15 +3,16 @@ import axios from "axios";
 
 const sendToServer = async (level, message, extra = {}) => {
   try {
-    // Only send in production/dev as you want — here always send
-    await axios.post("http://localhost:8080/api/logs", {
-      level,
-      message,
-      extra: JSON.stringify(extra),
-      path: window.location.pathname,
-    });
+    await axios.post(
+      `${import.meta.env.VITE_API_URL || "http://localhost:8080"}/api/logs`,
+      {
+        level,
+        message,
+        extra: JSON.stringify(extra),
+        path: window.location.pathname,
+      }
+    );
   } catch (err) {
-    // swallow any error to avoid infinite loops
     console.debug("logger: failed to send log", err);
   }
 };

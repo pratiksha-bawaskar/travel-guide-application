@@ -1,43 +1,39 @@
 import React, { useEffect, useState } from "react";
 import api from "../api/axiosInstance";
 import { Link } from "react-router-dom";
-import { useTranslation } from "react-i18next";
 
-const Favourites = () => {
-  const { t } = useTranslation();
-  const [favPlaces, setFavPlaces] = useState([]);
+const MyTrip = () => {
+  const [tripPlaces, setTripPlaces] = useState([]);
 
-  const loadFavourites = () => {
-    const favIds = JSON.parse(localStorage.getItem("fav")) || [];
+  useEffect(() => {
+    const tripIds = JSON.parse(localStorage.getItem("myTrip")) || [];
 
-    if (favIds.length === 0) {
-      setFavPlaces([]);
+    if (tripIds.length === 0) {
+      setTripPlaces([]);
       return;
     }
 
     api.get("/api/places")
       .then((res) => {
-        const filtered = res.data.filter((place) =>
-          favIds.includes(place.id)
+        const filteredPlaces = res.data.filter((place) =>
+          tripIds.includes(place.id)
         );
 
-        setFavPlaces(filtered);
+        setTripPlaces(filteredPlaces);
       })
-      .catch(() => alert(t("failedLoad")));
-  };
-
-  useEffect(() => {
-    loadFavourites();
+      .catch((err) => {
+        console.error("Failed to load trip places", err);
+      });
   }, []);
 
-  const removeFavourite = (placeId) => {
-    const favIds = JSON.parse(localStorage.getItem("fav")) || [];
+  const removeFromTrip = (placeId) => {
+    const tripIds = JSON.parse(localStorage.getItem("myTrip")) || [];
 
-    const updatedFavIds = favIds.filter((id) => id !== placeId);
+    const updatedIds = tripIds.filter((id) => id !== placeId);
 
-    localStorage.setItem("fav", JSON.stringify(updatedFavIds));
+    localStorage.setItem("myTrip", JSON.stringify(updatedIds));
 
-    setFavPlaces((prevPlaces) =>
+    setTripPlaces((prevPlaces) =>
       prevPlaces.filter((place) => place.id !== placeId)
     );
   };
@@ -46,30 +42,29 @@ const Favourites = () => {
     <div className="favourites-page">
       <div className="favourites-header">
         <div>
-          <p className="section-badge">❤️ Your Collection</p>
+          <p className="section-badge">🧳 Your Journey</p>
 
-          <h1>{t("favourites")}</h1>
+          <h1>My Trip</h1>
 
           <p className="favourites-subtitle">
-            Save the destinations you would love to visit.
+            Keep track of the destinations you want to visit.
           </p>
         </div>
 
         <div className="favourites-count">
-          <strong>{favPlaces.length}</strong>
-          <span>Saved Places</span>
+          <strong>{tripPlaces.length}</strong>
+          <span>Trip Places</span>
         </div>
       </div>
 
-      {favPlaces.length === 0 ? (
+      {tripPlaces.length === 0 ? (
         <div className="empty-state">
-          <div className="empty-icon">🧳</div>
+          <div className="empty-icon">🗺️</div>
 
-          <h2>{t("noResults")}</h2>
+          <h2>Your trip is empty</h2>
 
           <p>
-            Start exploring destinations and save your favourite places
-            for your next journey.
+            Explore destinations and add the places you want to visit.
           </p>
 
           <Link to="/" className="explore-link">
@@ -78,17 +73,13 @@ const Favourites = () => {
         </div>
       ) : (
         <div className="places favourites-grid">
-          {favPlaces.map((place) => (
+          {tripPlaces.map((place) => (
             <div className="card" key={place.id}>
               <img src={place.imageUrl} alt={place.name} />
 
               <div className="card-content">
                 <div className="card-header">
                   <h2>{place.name}</h2>
-
-                  <span className="rating-badge">
-                    ⭐ 4.5
-                  </span>
                 </div>
 
                 <p className="card-location">
@@ -109,7 +100,7 @@ const Favourites = () => {
 
                   <button
                     className="remove-favourite-btn"
-                    onClick={() => removeFavourite(place.id)}
+                    onClick={() => removeFromTrip(place.id)}
                   >
                     Remove
                   </button>
@@ -123,4 +114,4 @@ const Favourites = () => {
   );
 };
 
-export default Favourites;
+export default MyTrip;
